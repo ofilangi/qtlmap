@@ -12,7 +12,11 @@ QTLMap : a software dedicated to the detection of QTL from experimental designs 
 - libgmp3-dev 
 - cmake 3.10.2
 
-more information in the README file
+more information [here](./README)
+
+## documentation
+
+[here](./doc/qtlmapV0.9.6.pdf)
 
 ## compilation
 
