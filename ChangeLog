@@ -1,0 +1,688 @@
+2019-12-24 00:00  ofilangi
+
+        * compilation with gcc suite 7.4/cmake 3.10.2
+	* qtlmap 1.0.0
+	
+2013-09-30 13:33  ofilangi
+
+	* src/analyse/m_qtlmap_analyse.F95,
+	  src/analyse/m_qtlmap_incidence.F95: correction compilation CUDA
+	  (du aux modifications des parametres d'attributs IN/OUT pour la
+	  conformité avec ifort)
+
+2013-09-30 13:21  ofilangi
+
+	* src/data/m_qtlmap_type_cli.F95: correction affichage de l'aide.
+	  Les modes verbeux et l'option print-all etait affcihé dans
+	  --help-dev. deplacé dans --help
+
+2013-09-30 13:08  ofilangi
+
+	* src/data/m_qtlmap_type_lrt_solution.f95,
+	  src/output/m_qtlmap_output_handler.f95: correction bug affichage
+	  LRT
+
+2013-09-30 12:59  ofilangi
+
+	* src/data/m_qtlmap_type_lrt_solution.f95: correction bug index
+	  chromosome
+
+2013-09-30 12:18  ofilangi
+
+	* src/analyse/m_qtlmap_analyse.F95,
+	  src/analyse/m_qtlmap_analyse_modlin_cox.f95,
+	  src/analyse/m_qtlmap_incidence.F95,
+	  src/data/m_qtlmap_type_dataset.f95,
+	  src/data/m_qtlmap_type_lrt_solution.f95,
+	  src/data/m_qtlmap_type_parameter.f95,
+	  src/output/m_qtlmap_output_handler.f95: - Modification de
+	  l'affichage des LRT
+	  - Supression du fichier grid_qtl (redondance avec les infos du
+	  fichier LRT)
+
+2013-09-30 11:31  ofilangi
+
+	* src/log/m_qtlmap_log.F95: correction log (retour chariot en trop
+	  pour les warning et error)
+
+2013-09-27 09:22  ofilangi
+
+	* src/data/m_qtlmap_type_cli.F95: mise en conformité de l'aide avec
+	  la compilation ifort
+
+2013-09-27 08:46  ofilangi
+
+	* cmake_modules/CompileOptionsQTLMap.cmake: optimisation par
+	  options de compilation
+
+2013-09-27 08:40  ofilangi
+
+	* src/analyse/m_qtlmap_analyse.F95,
+	  src/analyse/m_qtlmap_incidence.F95,
+	  src/analyse/m_qtlmap_incidence_multi.f95: correction BUG avec une
+	  compilation intel.
+	  Le module incidence pointe sur la structure de donnée dataset et
+	  spt (contenant les pdd). Ces structures etant potentiel
+	  modifiable par le module incidence, ces deux structures doivent
+	  etre passe en argument inout
+
+2013-09-26 13:54  ofilangi
+
+	* cmake_modules/CompileOptionsQTLMap.cmake: le link avec les lib
+	  gfortran et gcc devient static
+
+2013-09-26 13:35  ofilangi
+
+	* src/output/m_qtlmap_output_handler.f95: on enleve l'affichage du
+	  seuil génomique
+
+2013-09-26 13:26  ofilangi
+
+	* src/qtlmap.F95: closes #2181
+	  
+	  On verifie qu'une famille de plein frere a une effectif superieur
+	  à 10 si l'utilisateur demande une permutation pour l obtention
+	  des seuils
+
+2013-09-26 13:15  ofilangi
+
+	* src/data/m_qtlmap_constant.f95, src/input/m_qtlmap_genealogy.f95:
+	  closes #2181
+	  
+	  On verifie qu'une famille de plein frere a une effectif superieur
+	  à 10 si l'utilisateur demande une permutation pour l obtention
+	  des seuils
+
+2013-09-26 12:26  ofilangi
+
+	* src/output/m_qtlmap_output_handler.f95: closes #1952
+	  
+	  Pour chaque positions (milti qtl) on affiche le chromosome et sa
+	  position successivement.
+
+2013-09-26 12:08  ofilangi
+
+	* src/output/m_qtlmap_output_handler.f95: closes #303
+	  
+	  correction du nombre d effectif affiché dans le summary
+
+2013-09-26 11:06  ofilangi
+
+	* src/input/m_qtlmap_phenotype.f95: correction affichage en cas d
+	  erreur de lecture du fichier de genotype
+
+2013-09-23 15:12  ofilangi
+
+	* src/analyse/m_qtlmap_analyse.F95: correction compil CUDA
+
+2013-09-23 15:11  ofilangi
+
+	* lib/randlib/sdot.f, lib/randlib/spofa.f: correction
+	  dimmensionnement tableau
+
+2013-09-16 13:54  ofilangi
+
+	* src/input/m_qtlmap_phenotype.f95: nouvel argument à l'appel
+	  setgmn (randlib a été updaté)
+
+2013-09-16 13:41  ofilangi
+
+	* lib/randlib/phrtsd.f, lib/randlib/sdot.f, lib/randlib/setgmn.f,
+	  lib/randlib/snorm.f, lib/randlib/spofa.f: update de la lib
+	  randlib
+
+2013-09-16 11:09  ofilangi
+
+	* src/output/m_qtlmap_output_handler.f95: Modification de l'entete
+	  du fichier de simulation des LRTMax
+	  
+	  closes #1953
+
+2013-09-16 09:47  ofilangi
+
+	* src/qtlmap.F95: on remet les log à INFO apres la phase de
+	  simulation
+
+2013-09-16 09:03  ofilangi
+
+	* src/data/m_qtlmap_type_parameter.f95: moficiation de la valeur
+	  par defaut de K_PROB_HAPLO_MIN
+	  closes #1947
+
+2013-09-16 08:55  ofilangi
+
+	* src/data/m_qtlmap_type_parameter.f95: modification de la clef
+	  in_race => in_pop
+	  closes #1816
+
+2013-09-13 15:22  ofilangi
+
+	* src/output/m_qtlmap_output_handler.f95: l'option recl ne doit pas
+	  etre parametrer de la meme maniere pour ifort ou gfortran.
+	  creation d'un environnement INTEL_COMP et GNU_COMP
+
+2013-09-13 15:11  ofilangi
+
+	* testdev/execution/transcript/test_multi.sh: amelioration/bug
+	  affichage du script de test
+
+2013-09-13 15:10  ofilangi
+
+	* testdev/execution/calcul_corcd/test.sh,
+	  testdev/execution/calcul_corcd/test_multi.sh,
+	  testdev/execution/ld/test.sh,
+	  testdev/execution/output_files/test.sh,
+	  testdev/execution/output_files/test_multi.sh,
+	  testdev/execution/transcript/test.sh: amelioration/bug affichage
+	  du script de test
+
+2013-09-13 15:10  ofilangi
+
+	* cmake_modules/CompileOptionsQTLMap.cmake: option pour ifort
+
+2013-09-13 14:03  ofilangi
+
+	* src/log/m_qtlmap_log.F95: couleur pour le debug et le verbose
+
+2013-09-13 13:55  ofilangi
+
+	* src/output/m_qtlmap_output_handler.f95: mise en conformité avec
+	  le compilateur intel : recl en entrée de open ne doit pas exceder
+	  2**10
+
+2013-09-13 13:50  ofilangi
+
+	* src/log/m_qtlmap_log.F95: correction affichage
+
+2013-09-13 13:47  ofilangi
+
+	* src/input/m_qtlmap_phenotype.f95: correction bug sur la lecture
+	  du fichier model
+
+2013-09-13 13:40  ofilangi
+
+	* src/input/m_qtlmap_genotype.f95: correction bug ifort
+
+2013-09-13 13:40  ofilangi
+
+	* src/data/m_qtlmap_type_parameter.f95: affichage warning en trop
+
+2013-09-13 13:40  ofilangi
+
+	* src/log/m_qtlmap_log.F95: creation d'un fmt pour l'affichage
+	  (ifort compatibilité)
+
+2013-09-13 12:17  ofilangi
+
+	* testdev/execution/ld, testdev/execution/ld/OUTPUT,
+	  testdev/execution/ld/README, testdev/execution/ld/carte,
+	  testdev/execution/ld/genea, testdev/execution/ld/model,
+	  testdev/execution/ld/p_analyse, testdev/execution/ld/perfs,
+	  testdev/execution/ld/test.sh, testdev/execution/ld/typages: tests
+	  sur le LD
+
+2013-09-13 12:15  ofilangi
+
+	* src/data/m_qtlmap_base.F95, src/log/m_qtlmap_log.F95: coloration
+	  dans la console des warning et erreurs
+
+2013-09-13 11:49  ofilangi
+
+	* src/input/m_qtlmap_map.f95: amelioration de l'affichage
+
+2013-09-13 10:51  ofilangi
+
+	* doc/qtlmap.odt: doc à jours
+
+2013-09-13 10:51  ofilangi
+
+	* lib/CMakeLists.txt, lib/miscf77/CMakeLists.txt: creation d'une
+	  nouvelle lib
+
+2013-09-13 10:50  ofilangi
+
+	* src/analyse/m_qtlmap_analyse.F95: correction bug 2QTL sur la
+	  structure LRT
+
+2013-09-13 10:41  ofilangi
+
+	* src/output/m_qtlmap_output_handler.f95: on afiche le nombre
+	  d'animaux qui ne sont pas pris en compte dans l'analyse
+
+2013-09-13 10:07  ofilangi
+
+	* check.sh: script de test à jours
+
+2013-09-13 10:06  ofilangi
+
+	* CMakeLists.txt: preparation de la version 0.9.7
+
+2013-09-13 10:03  ofilangi
+
+	* testdev/unit/CMakeLists.txt, testdev/unit/fruit,
+	  testdev/unit/fruit/fruit.f90, testdev/unit/fruit/fruit_util.f90,
+	  testdev/unit/main.f95, testdev/unit/src, testdev/unit/src/data,
+	  testdev/unit/src/data/test_type_lrt_solution.f95,
+	  testdev/unit/src/data/test_type_map.f95: ajout de tests unitaires
+	  (mode TDD)
+
+2013-09-13 10:02  ofilangi
+
+	* src/analyse/m_qtlmap_calcul_ic.f95,
+	  src/analyse/m_qtlmap_incidence.F95,
+	  src/data/m_qtlmap_type_lrt_solution.f95,
+	  src/data/m_qtlmap_type_map.f95,
+	  src/data/m_qtlmap_type_parameter.f95, src/input/m_qtlmap_map.f95:
+	  correction bug 2QTL sur la structure LRT
+
+2013-09-13 09:56  ofilangi
+
+	* src/data/m_qtlmap_base.F95: formattage
+
+2013-09-13 09:55  ofilangi
+
+	* src/data/m_qtlmap_type_cli.F95: formattage
+
+2013-09-13 08:03  ofilangi
+
+	* src/data/m_qtlmap_type_map.f95,
+	  src/output/m_qtlmap_output_handler.f95: closes #2120
+	  - modification de l'affichage des haplotypes parentaux pour les
+	  descendants
+
+2013-09-11 09:21  ofilangi
+
+	* src/input/m_qtlmap_genealogy.f95,
+	  src/input/m_qtlmap_genotype.f95, src/input/m_qtlmap_map.f95,
+	  src/input/m_qtlmap_phenotype.f95: Amélioration de la verification
+	  des fichiers en entrée de l'application
+
+2013-09-11 08:27  ofilangi
+
+	* src/analyse/m_qtlmap_analyse.F95,
+	  src/analyse/m_qtlmap_calcul_ic.f95,
+	  src/data/m_qtlmap_type_cli.F95: option --hdam par défaut
+
+2013-09-10 15:12  ofilangi
+
+	* testdev/execution/calcul_corcd/OUTPUT/dams,
+	  testdev/execution/calcul_corcd/OUTPUT/grid2qtl,
+	  testdev/execution/calcul_corcd/OUTPUT/mateff,
+	  testdev/execution/calcul_corcd/OUTPUT/pateff,
+	  testdev/execution/calcul_corcd/OUTPUT/pded_Chr_7,
+	  testdev/execution/calcul_corcd/OUTPUT/pdedjoin_Chr_7,
+	  testdev/execution/calcul_corcd/OUTPUT/phases,
+	  testdev/execution/calcul_corcd/OUTPUT/result,
+	  testdev/execution/calcul_corcd/OUTPUT/sires,
+	  testdev/execution/calcul_corcd/OUTPUT/summary,
+	  testdev/execution/calcul_corcd/model,
+	  testdev/execution/calcul_corcd/model_1,
+	  testdev/execution/calcul_corcd/model_n,
+	  testdev/execution/calcul_corcd/p_analyse_1,
+	  testdev/execution/calcul_corcd/p_analyse_n,
+	  testdev/execution/calcul_corcd/test.sh,
+	  testdev/execution/calcul_corcd/test_multi.sh,
+	  testdev/execution/output_files/OUTPUT/dams,
+	  testdev/execution/output_files/OUTPUT/freqall,
+	  testdev/execution/output_files/OUTPUT/haplotype,
+	  testdev/execution/output_files/OUTPUT/mateff,
+	  testdev/execution/output_files/OUTPUT/pateff,
+	  testdev/execution/output_files/OUTPUT/pded_Chr_1,
+	  testdev/execution/output_files/OUTPUT/pdedjoin_Chr_1,
+	  testdev/execution/output_files/OUTPUT/phase,
+	  testdev/execution/output_files/OUTPUT/phases_offspring,
+	  testdev/execution/output_files/OUTPUT/phases_offspring_trait1,
+	  testdev/execution/output_files/OUTPUT/phases_offspring_trait2,
+	  testdev/execution/output_files/OUTPUT/result,
+	  testdev/execution/output_files/OUTPUT/sires,
+	  testdev/execution/output_files/OUTPUT/summary,
+	  testdev/execution/output_files/test.sh,
+	  testdev/execution/output_files/test_multi.sh,
+	  testdev/execution/transcript,
+	  testdev/execution/transcript/OUTPUT,
+	  testdev/execution/transcript/OUTPUT/dams,
+	  testdev/execution/transcript/OUTPUT/freqall,
+	  testdev/execution/transcript/OUTPUT/haplotype,
+	  testdev/execution/transcript/OUTPUT/mateff,
+	  testdev/execution/transcript/OUTPUT/pateff,
+	  testdev/execution/transcript/OUTPUT/pded_Chr_1,
+	  testdev/execution/transcript/OUTPUT/pdedjoin_Chr_1,
+	  testdev/execution/transcript/OUTPUT/phase,
+	  testdev/execution/transcript/OUTPUT/phases_offspring,
+	  testdev/execution/transcript/OUTPUT/phases_offspring_trait1,
+	  testdev/execution/transcript/OUTPUT/phases_offspring_trait2,
+	  testdev/execution/transcript/OUTPUT/phases_offspring_trait3,
+	  testdev/execution/transcript/OUTPUT/phases_offspring_trait4,
+	  testdev/execution/transcript/OUTPUT/phases_offspring_trait5,
+	  testdev/execution/transcript/OUTPUT/result,
+	  testdev/execution/transcript/OUTPUT/sires,
+	  testdev/execution/transcript/OUTPUT/summary,
+	  testdev/execution/transcript/carte,
+	  testdev/execution/transcript/genea,
+	  testdev/execution/transcript/model,
+	  testdev/execution/transcript/model_1,
+	  testdev/execution/transcript/model_n,
+	  testdev/execution/transcript/p_analyse,
+	  testdev/execution/transcript/p_analyse_n,
+	  testdev/execution/transcript/pheno,
+	  testdev/execution/transcript/pheno_t,
+	  testdev/execution/transcript/test.sh,
+	  testdev/execution/transcript/test_multi.sh,
+	  testdev/execution/transcript/typage, testdev/unit:
+
+2013-09-10 15:12  ofilangi
+
+	* check.sh:
+
+2013-09-10 13:50  ofilangi
+
+	* check.sh: ajout de test sur les options en ligne de commande
+
+2013-09-10 13:41  ofilangi
+
+	* src/analyse/CMakeLists.txt: update de CMakeLists.txt du au plugin
+	  cuda de cmake
+
+2013-09-10 13:40  ofilangi
+
+	* src/analyse/cuda_qtlmap_linear.cu: syntaxe
+
+2013-09-10 13:39  ofilangi
+
+	* src/output/m_qtlmap_output_handler.f95, src/qtlmap.F95:
+	  correction bug multi caractere
+
+2013-09-10 13:19  ofilangi
+
+	* src/output/m_qtlmap_output_handler.f95, src/qtlmap.F95:
+	  correction bug sur l'analyse multicaractere et le calcul des
+	  intervalles de confiances
+
+2013-09-10 11:07  ofilangi
+
+	* check.sh: precision sur les echecs des tests
+	  w
+
+2013-09-10 10:40  ofilangi
+
+	* testdev/calcul_corcd, testdev/execution/calcul_corcd,
+	  testdev/execution/race_ld, testdev/race_ld:
+
+2013-09-10 10:40  ofilangi
+
+	* check.sh: mise en place des tests
+	  w
+
+2013-09-10 10:39  ofilangi
+
+	* testdev/execution/output_files/OUTPUT:
+
+2013-09-10 10:31  ofilangi
+
+	* testdev, testdev/calcul_corcd, testdev/calcul_corcd/OUTPUT,
+	  testdev/calcul_corcd/carte, testdev/calcul_corcd/genea,
+	  testdev/calcul_corcd/model, testdev/calcul_corcd/p_analyse,
+	  testdev/calcul_corcd/perf, testdev/calcul_corcd/typage,
+	  testdev/execution, testdev/execution/README,
+	  testdev/execution/output_files,
+	  testdev/execution/output_files/carte,
+	  testdev/execution/output_files/genea,
+	  testdev/execution/output_files/model,
+	  testdev/execution/output_files/model_1,
+	  testdev/execution/output_files/model_n,
+	  testdev/execution/output_files/p_analyse,
+	  testdev/execution/output_files/p_analyse_n,
+	  testdev/execution/output_files/pheno,
+	  testdev/execution/output_files/test.sh,
+	  testdev/execution/output_files/test_multi.sh,
+	  testdev/execution/output_files/typage, testdev/race_ld,
+	  testdev/race_ld/CALCUL.txt, testdev/race_ld/OUTPUT,
+	  testdev/race_ld/OUTPUT/haplotypes26,
+	  testdev/race_ld/OUTPUT/phases26, testdev/race_ld/OUTPUT/result,
+	  testdev/race_ld/OUTPUT/result_freqall,
+	  testdev/race_ld/OUTPUT/sires26, testdev/race_ld/OUTPUT/summary26,
+	  testdev/race_ld/carte, testdev/race_ld/model_fx,
+	  testdev/race_ld/p_analyse, testdev/race_ld/ped,
+	  testdev/race_ld/perf_fx, testdev/race_ld/race,
+	  testdev/race_ld/typ: Mise en place de test
+
+2013-09-10 09:54  ofilangi
+
+	* Test_Dev, Test_Dev/calcul_corcd, Test_Dev/execution,
+	  Test_Dev/execution/output_files,
+	  Test_Dev/execution/output_files/carte,
+	  Test_Dev/execution/output_files/genea,
+	  Test_Dev/execution/output_files/model,
+	  Test_Dev/execution/output_files/model_1,
+	  Test_Dev/execution/output_files/model_n,
+	  Test_Dev/execution/output_files/p_analyse,
+	  Test_Dev/execution/output_files/p_analyse_n,
+	  Test_Dev/execution/output_files/pheno,
+	  Test_Dev/execution/output_files/test.sh,
+	  Test_Dev/execution/output_files/test_multi.sh,
+	  Test_Dev/execution/output_files/typage, Test_Dev/porc,
+	  Test_Dev/porc_2QTL, Test_Dev/porc_lin, Test_Dev/porc_mcar,
+	  Test_Dev/porc_mcar_5car, Test_Dev/porc_simul, Test_Dev/race_ld:
+	  Restructuration des testswq
+
+2013-08-30 09:20  ofilangi
+
+	* doc/Output files1208.doc, doc/devel, doc/qtlmap-0.8.odt,
+	  doc/qtlmap.odt, doc/qtlmap_documentation.doc: Repertoire de la
+	  doc à jour.
+	  qtlmap.odt est la dernière version de la documentation
+
+2013-08-30 09:12  ofilangi
+
+	* dist_sample, dist_sample/design_protocol/OUTPUTSIM/result,
+	  dist_sample/design_protocol/OUTPUTSIM/summary,
+	  dist_sample/porcqtl/OUTPUT/dams,
+	  dist_sample/porcqtl/OUTPUT/mateff,
+	  dist_sample/porcqtl/OUTPUT/pateff,
+	  dist_sample/porcqtl/OUTPUT/pded_Chr_7,
+	  dist_sample/porcqtl/OUTPUT/pdedjoin_Chr_7,
+	  dist_sample/porcqtl/OUTPUT/phases,
+	  dist_sample/porcqtl/OUTPUT/result,
+	  dist_sample/porcqtl/OUTPUT/sires,
+	  dist_sample/porcqtl/OUTPUT/summary, dist_sample/porcqtl/model,
+	  dist_sample/porcqtl/res_23, dist_sample/porcqtl/res_5,
+	  dist_sample/porcqtl/res_6:
+
+2013-08-30 09:12  ofilangi
+
+	* sample: On efface le repertoiresample au profit d'un repertoire
+	  de dist_sample
+
+2013-08-30 09:11  ofilangi
+
+	* exemple: On efface le repertoire exemple au profit d'un
+	  repertoire de Test Developpement
+
+2013-06-03 10:05  ofilangi
+
+	* CMakeLists.txt: update du numero de version
+
+2013-06-03 10:04  ofilangi
+
+	* src/output/m_qtlmap_output_handler.f95: - modification de la
+	  structuration pour les tests d hypothese (le teste est
+	  independant du nombre de QTL qu'on ajoute dans le modele)
+
+2013-06-03 10:03  ofilangi
+
+	* src/input/m_qtlmap_phenotype.f95: modif generation/simulation qtl
+	  en interaction
+
+2013-06-03 10:02  ofilangi
+
+	* src/data/m_qtlmap_type_lrt_solution.f95: - modification de la
+	  structuration pour les tests d hypothese (le teste est
+	  independant du nombre de QTL qu'on ajoute dans le modele)
+
+2013-06-03 10:01  ofilangi
+
+	* src/analyse/m_qtlmap_analyse.F95,
+	  src/analyse/m_qtlmap_incidence.F95,
+	  src/analyse/m_qtlmap_incidence_multi.f95: - code pour modifier le
+	  comportement des analyses lineaire (on utilise toute les probas.
+	  les valeurs des individus dans la matrice d incidence sont une
+	  combinaison lineaire de toute les phases ponderees par les probas
+	  des phases)
+	  - modification de la structuration pour les tests d hypothese (le
+	  teste est independant du nombre de QTL qu'on ajoute dans le
+	  modele)
+
+2013-04-26 07:04  ofilangi
+
+	* src/analyse/m_qtlmap_calcul_ic.f95,
+	  src/output/m_qtlmap_output_handler.f95: finalisation de la
+	  generalisation du calcul des intervalles de confiances
+	  (implementation pour les methodes de boostrap).
+
+2013-04-25 13:47  ofilangi
+
+	* src/data/m_qtlmap_type_lrt_solution.f95: - Mise en place d'une
+	  structure de donnees pour gerer les LRT mutli-qtl (CUDA)
+	  - ajout d'une methode available à la structure LRT
+	  
+
+2013-04-25 13:46  ofilangi
+
+	* src/analyse/m_qtlmap_incidence_multi.f95: correction init LRT
+
+2013-04-25 13:44  ofilangi
+
+	* src/analyse/m_qtlmap_analyse_unitrait.f95,
+	  src/analyse/m_qtlmap_calcul_ic.f95,
+	  src/analyse/m_qtlmap_incidence.F95: --gestion du calcul de ic en
+	  mutliqtl (dropoff-hengde li)
+
+2013-04-25 13:08  ofilangi
+
+	* src/analyse/cuda_qtlmap_linear.cu: modif affichage (mineure)
+
+2013-04-25 07:29  ofilangi
+
+	* src/analyse/m_qtlmap_incidence.F95,
+	  src/analyse/m_qtlmap_incidence_multi.f95,
+	  src/data/m_qtlmap_type_lrt_solution.f95,
+	  src/output/m_qtlmap_output_handler.f95: - Mise en place d'une
+	  structure de donnees pour gerer les LRT mutli-qtl (CUDA)
+	  - ajout d'une methode available à la structure LRT
+	  
+
+2013-04-24 15:34  ofilangi
+
+	* src/output/CMakeLists.txt: la routine bilan_share_haplo est
+	  deplace dans le module output (role d'affichage)
+	  le module haplotype ne depend plus du module output
+
+2013-04-24 15:33  ofilangi
+
+	* src/haplotype/m_qtlmap_haplotype.f95,
+	  src/haplotype/m_qtlmap_haplotype_V1.f95,
+	  src/haplotype/m_qtlmap_haplotype_V2.f95,
+	  src/haplotype/m_qtlmap_haplotype_ldla.f95: la routine
+	  bilan_share_haplo est deplace dans le module output (role
+	  d'affichage)
+	  le module haplotype ne depend plus du module output
+
+2013-04-24 15:32  ofilangi
+
+	* src/analyse/m_qtlmap_analyse_biallelic_farnir.f95,
+	  src/analyse/m_qtlmap_analyse_discret_unitrait.f95,
+	  src/analyse/m_qtlmap_analyse_modlin.f95,
+	  src/analyse/m_qtlmap_analyse_modlin_cox.f95,
+	  src/analyse/m_qtlmap_analyse_modlin_ldla.f95,
+	  src/analyse/m_qtlmap_analyse_multitrait.f95,
+	  src/analyse/m_qtlmap_analyse_multitrait_DA.f95,
+	  src/analyse/m_qtlmap_analyse_unitrait.f95,
+	  src/analyse/m_qtlmap_calcul_ic.f95,
+	  src/analyse/m_qtlmap_incidence.F95,
+	  src/analyse/m_qtlmap_incidence_multi.f95,
+	  src/data/m_qtlmap_type_cli.F95,
+	  src/data/m_qtlmap_type_lrt_solution.f95,
+	  src/output/m_qtlmap_output_handler.f95: Mise en place d'une
+	  structure de donnees pour gerer les LRT mutli-qtl
+	  
+
+2013-04-23 13:21  ofilangi
+
+	* src/input/m_qtlmap_phenotype.f95: le mot clef correlation_matrix
+	  doit etre definit en majuscule dans le fichier model
+
+2013-04-22 14:48  ofilangi
+
+	* src/output/m_qtlmap_output_handler.f95, src/qtlmap.F95: Affichage
+	  des marqueurs flanquant à l'intervalle de confiance
+	  closes #62
+
+2013-04-22 13:44  ofilangi
+
+	* src/output/m_qtlmap_output_handler.f95: affichage de la position
+	  des marqueurs flanquants au QTL
+
+2013-04-22 13:28  ofilangi
+
+	* src/analyse/m_qtlmap_analyse.F95,
+	  src/haplotype/m_qtlmap_haplotype.f95,
+	  src/output/m_qtlmap_output_handler.f95: Ajout de l'information
+	  "Informativité du marqueur au maximum de vraisemblance"
+	  
+	  On affiche pour chaque caractere etudié, chaque QTL et chaque
+	  pere :
+	  - l'haplotype à la position du marqueur
+	  - informativité (compris entre 0 et 1, 0 etant l'informativité
+	  nulle et 1 total )
+	  calcul = 2 * sum | Proba_d_avoir_recu_1_du_pere - 0.5 | /
+	  Nombre_de_descendants_de_pere
+	  
+	  closes #1579
+
+2013-04-22 11:44  ofilangi
+
+	* src/data/m_qtlmap_constant.f95,
+	  src/data/m_qtlmap_type_phenotype.f95,
+	  src/input/m_qtlmap_phenotype.f95: Ajout d'un mot clef pour
+	  definir une sous liste de caractere à etudier.
+	  closes #1777
+
+2013-04-22 09:23  ofilangi
+
+	* src/data/m_qtlmap_type_phenotype.f95,
+	  src/input/m_qtlmap_phenotype.f95: Evolution du format du fichier
+	  model :
+	  lorsque le mot clef 'all' est definit, on donne la liste des noms
+	  des phenotypes à recuperer dans le fichier de phenotypes (et non
+	  l'indice)
+	  
+	  L'utilisation du mot clef 'all' est compatible seulement avec l
+	  option --data-transcriptomic - closes #1778
+
+2013-04-22 09:20  ofilangi
+
+	* src/analyse/m_qtlmap_incidence.F95: correction bug. utilisation
+	  du tableau nmod non initialisé
+
+2013-04-22 07:49  ofilangi
+
+	* src/analyse/m_qtlmap_incidence.F95: sauvegarde des dev sur le
+	  modele biallelique
+
+2013-04-22 07:45  ofilangi
+
+	* src/analyse/m_qtlmap_analyse_gen.f95: ajout d une routine pour
+	  inverser les probas de transmission utilisable pour l'analyse
+	  discriminante ou le modele biallelique.
+
+2013-04-22 07:37  ofilangi
+
+	* src/analyse/m_qtlmap_analyse_biallelic_farnir.f95: version de dev
+	  (travaille avec JM du 09/04/2013)
+
+2013-04-22 07:34  ofilangi
+
+	* src/analyse/m_qtlmap_analyse.F95: correction bug multicaractere.
+	  les seuils ne s affichait pas correctement (refs #1805)
+	  closes #1805
+

@@ -1,0 +1,16 @@
+in_map=carte
+in_genealogy=genea
+in_genotype=typages
+in_traits=perfs
+in_model=model
+opt_step = 0.001
+opt_ndmin=15
+opt_chromosome=1
+opt_unknown_char=0
+out_output=./OUTPUT/result
+out_summary=./OUTPUT/summary
+out_maxlrt=./OUTPUT/simul
+out_haplotypes=./OUTPUT/haplotypes
+out_phases_offspring=./OUTPUT/offspring
+opt_phases_offspring_marker_start=m1
+opt_phases_offspring_marker_end=m4

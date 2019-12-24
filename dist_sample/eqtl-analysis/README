@@ -1,0 +1,11 @@
+
+# When performing eQTL analysis (using –data­transcriptomic command) or simulation the output is 
+# minimised.  To force the classical reporting format, use the runtime option –print-all.
+
+qtlmap p_analyse --data-transcriptomic
+
+or
+
+qtlmap p_analyse --data-transcriptomic --print-all
+
+

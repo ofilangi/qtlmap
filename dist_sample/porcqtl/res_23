@@ -1,0 +1,411 @@
+     ***    
+        DATE      = 2013/06/20-16:53:53
+        Release-build      = 0.9.6-11.04.2013-14.25.16
+        ARGUMENTS   = p_analyse --calcul=23
+        --CALCUL  =           23  (MULTI-TRAITS ANALYSIS WITH COVARIATE/FIXED EFFECT)
+ OMP_NUM_THREADS  =            1
+
+
+     *****************  PARAMETERS ANALYSE FILE SUMMARY *****************
+
+out_output                              =./OUTPUT/result                                                                 
+out_lrtsires                            =./OUTPUT/sires                                                                  
+out_lrtdams                             =./OUTPUT/dams                                                                   
+out_pded                                =./OUTPUT/pded                                                                   
+out_pdedjoin                            =./OUTPUT/pdedjoin                                                               
+out_pateff                              =./OUTPUT/pateff                                                                 
+out_mateff                              =./OUTPUT/mateff                                                                 
+out_grid2qtl                            =./OUTPUT/grid2qtl                                                               
+out_summary                             =./OUTPUT/summary                                                                
+opt_chromosome                          =7                                                                               
+opt_ndmin                               =20                                                                              
+opt_step                                = 0.01                                                                           
+opt_unknown_char                        =0                                                                               
+opt_mindamphaseproba                    =0.10                                                                            
+opt_minsirephaseproba                   =0.90                                                                            
+opt_eps_cholesky                        =0.01                                                                            
+opt_eps_confusion                       =0.70                                                                            
+opt_eps_hwe                             =0.01                                                                            
+opt_eps_linear_heteroscedastic          =0.5                                                                             
+in_map                                  =map                                                                             
+in_genealogy                            =genealogy                                                                       
+in_traits                               =phenotypes                                                                      
+in_genotype                             =genotype                                                                        
+in_model                                =model                                                                           
+out_maxlrt                              =./OUTPUT/all_simul                                                              
+opt_max_iteration_linear_heteroscedastic=30                                                                              
+opt_eps_recomb                          =0.05                                                                            
+out_phases                              =./OUTPUT/phases                                                                 
+opt_nb_haplo_prior                      =200                                                                             
+opt_prob_haplo_min                      =0.00001                                                                         
+opt_long_min_ibs                        =4                                                                               
+opt_longhap                             =4                                                                               
+opt_optim_maxeval                       =1000000                                                                         
+opt_optim_maxtime                       =1000000                                                                         
+opt_optim_tolx                          =0.00005                                                                         
+opt_optim_tolf                          =0.00005                                                                         
+opt_optim_tolg                          =0.00005                                                                         
+opt_optim_h_precision                   =0.00005                                                                         
+
+
+     *****************  GENEALOGY DESCRIPTION *****************
+
+ The pedigree file includes      20 parents born from      5 grand sires and       5 grand dams
+ and     236 progeny born from      4 sires and      16 dams
+
+
+     ***************** MARKER DESCRIPTION *****************
+
+  236 animals are present in the genotype file 
+ animal890738 900848 of genotype file are not in the pedigree file
+ where all animals are genotyped for at least one marker.
+markers were selected among   10 markers
+There are  236 genotyped animals
+
+ ** Check the equilibrium of marker transmission within each family **
+
+
+
+    ***************** TRAITS DESCRIPTION *****************
+
+
+     NUMBER OF PHENOTYPED ANIMALS   :   236
+     NUMBER OF PHENOTYPED AND GENOTYPED ANIMALS :   236
+     NUMBER OF TRAITS               :     3
+     NUMBER OF FIXED EFFECTS        :     0
+     NUMBER OF COVARIABLES          :     0
+
+ TRAIT :Bardie
+     NUMBER OF PHENOTYPED PROGENY               :   236
+     MEANS                                      :    7.169+-   0.650
+     MINIMUM                                    :    6.048
+     MAXIMUM                                    :   9.668
+     NUMBER OF MISSING PHENOTYPES               :     0
+     NUMBER OF CENSORED PHENOTYPES              :    0
+ WITHOUT MODEL for fixed effects and covariables
+
+ TRAIT :   Imf
+     NUMBER OF PHENOTYPED PROGENY               :   236
+     MEANS                                      :    1.984+-   0.396
+     MINIMUM                                    :    0.930
+     MAXIMUM                                    :   3.270
+     NUMBER OF MISSING PHENOTYPES               :     0
+     NUMBER OF CENSORED PHENOTYPES              :    0
+ WITHOUT MODEL for fixed effects and covariables
+
+ TRAIT : Panne
+     NUMBER OF PHENOTYPED PROGENY               :   236
+     MEANS                                      :    0.963+-   0.192
+     MINIMUM                                    :    0.626
+     MAXIMUM                                    :   1.830
+     NUMBER OF MISSING PHENOTYPES               :     0
+     NUMBER OF CENSORED PHENOTYPES              :    0
+ WITHOUT MODEL for fixed effects and covariables
+
+     ***************** PARENTAL PHASES *****************
+                       FILE :./OUTPUT/phases
+     ***************************************************
+
+
+         ************************************
+         *                                  *
+         *  Joint analysis of the traits    *
+         *                                  *
+         ************************************
+
+
+ ---------------------------------------------------------------
+ Estimation of parameters under H0
+ ---------------------------------------------------------------
+
+ Within sire standard deviation
+  ** Trait Bardiere **
+ sire 910001  s.d. :     0.539
+ sire 910045  s.d. :     0.583
+ sire 910081  s.d. :     0.706
+ sire 910088  s.d. :     0.605
+  ** Trait Imf **
+ sire 910001  s.d. :     0.390
+ sire 910045  s.d. :     0.448
+ sire 910081  s.d. :     0.396
+ sire 910088  s.d. :     0.353
+  ** Trait Panne **
+ sire 910001  s.d. :     0.155
+ sire 910045  s.d. :     0.112
+ sire 910081  s.d. :     0.229
+ sire 910088  s.d. :     0.197
+
+
+
+  parameter            estimable ?    value     precision
+
+ General Mean [Bardiere]                 
+
+                                                    yes      7.539     0.033
+
+ General Mean [Imf]                      
+
+                                                    yes      2.000     0.033
+
+ General Mean [Panne]                    
+
+                                                    yes      1.031     0.033
+
+ Sire polygenic effects [Bardiere]       
+
+          Sire 910001                               yes     -0.667     0.067
+          Sire 910045                               yes     -0.448     0.058
+          Sire 910081                               yes     -0.264     0.065
+          Sire 910088                               no 
+
+ Sire polygenic effects [Imf]            
+
+          Sire 910001                               yes     -0.024     0.067
+          Sire 910045                               yes     -0.053     0.058
+          Sire 910081                               yes     -0.009     0.065
+          Sire 910088                               no 
+
+ Sire polygenic effects [Panne]          
+
+          Sire 910001                               yes     -0.125     0.067
+          Sire 910045                               yes     -0.132     0.058
+          Sire 910081                               yes     -0.045     0.065
+          Sire 910088                               no 
+
+ Dam polygenic effects [Bardiere]        
+
+          Dam 910014 [Sire 910001]                  yes      0.062     0.069
+          Dam 910002 [Sire 910081]                  yes     -0.052     0.073
+          Dam 910010 [Sire 910081]                  yes     -0.128     0.068
+          Dam 910074 [Sire 910088]                  yes     -0.220     0.075
+
+ Dam polygenic effects [Imf]             
+
+          Dam 910014 [Sire 910001]                  yes      0.024     0.069
+          Dam 910002 [Sire 910081]                  yes     -0.011     0.073
+          Dam 910010 [Sire 910081]                  yes      0.000     0.068
+          Dam 910074 [Sire 910088]                  yes      0.000     0.075
+
+ Dam polygenic effects [Panne]           
+
+          Dam 910014 [Sire 910001]                  yes      0.025     0.069
+          Dam 910002 [Sire 910081]                  yes      0.010     0.073
+          Dam 910010 [Sire 910081]                  yes      0.015     0.068
+          Dam 910074 [Sire 910088]                  yes     -0.039     0.075
+
+  NOTE: known allelic origin means QTL effect =  maternal - paternal allele effects
+
+ Residual Correlations 
+             1            2
+         2 -0.152
+         3  0.706    -0.196
+                         ***                          
+  The mean of absolute value of substitution effect WQ (in std unit) =
+  -------------------------- 
+  -------------------------- 
+                       *****                    
+   ** chromosome  7 ** 
+
+            I-----------I-----------I-----------I-----------I
+          
+   113.4 -                     oo
+   109.3 I                    oooo
+   105.2 I                    o  oo
+   101.2 I                    o    o
+    97.1 I                   o     oo
+    93.0 I                  oo      o
+    89.0 -                  o       oo
+    84.9 I                 o         o
+    80.8 I               ooo         o
+    76.8 I              oo           oo
+    72.7 I             o              o
+    68.6 I            oo              o
+    64.6 -            o                o
+    60.5 I           oo                o
+    56.4 I           o                 o
+    52.4 I          oo                  o ooo
+    48.3 I          o                   ooo oooo
+    44.2 I  ooooo  o                          ooooo
+    40.2 -       ooo                              oo
+    36.1 I                                         oo
+    32.0 I                                          oo
+    28.0 I                                           oo
+    23.9 I                                             oo
+    19.8 I                                              oo
+    15.8 -                                               oooo
+          
+            I-----------I-----------I-----------I-----------I
+    0.01        0.43        0.85        1.27        1.69
+
+
+ Maximum likelihood ratio test :
+
+Test H0 / H1 : 113.37152
+
+ The maximum is reached at position(s)    0.6900(Chr :7   ) 
+ flanking marker (qtl:    1) ,SLA                 ,S0102               
+ ---------------------------------------------------------------
+ Estimation of parameters under H1
+ ---------------------------------------------------------------
+
+ Within sire standard deviation
+  ** Trait Bardiere **
+ sire 910001  s.d. :     0.486
+ sire 910045  s.d. :     0.555
+ sire 910081  s.d. :     0.610
+ sire 910088  s.d. :     0.543
+  ** Trait Imf **
+ sire 910001  s.d. :     0.337
+ sire 910045  s.d. :     0.422
+ sire 910081  s.d. :     0.352
+ sire 910088  s.d. :     0.339
+  ** Trait Panne **
+ sire 910001  s.d. :     0.143
+ sire 910045  s.d. :     0.105
+ sire 910081  s.d. :     0.202
+ sire 910088  s.d. :     0.165
+
+
+
+  parameter            estimable ?    value     precision
+
+ General Mean [Bardiere]                 
+
+                                                    yes      7.527     0.033
+
+ General Mean [Imf]                      
+
+                                                    yes      2.004     0.033
+
+ General Mean [Panne]                    
+
+                                                    yes      1.025     0.033
+
+ Sire QTL effects [1] [Bardiere]         
+
+          Sire 910001 Level 1                       yes     -0.158     0.021
+          Sire 910045 Level 1                       yes     -0.148     0.028
+          Sire 910081 Level 1                       yes     -0.211     0.014
+          Sire 910088 Level 1                       yes     -0.217     0.021
+
+ Sire QTL effects [1] [Imf]              
+
+          Sire 910001 Level 1                       yes      0.212     0.021
+          Sire 910045 Level 1                       yes      0.164     0.028
+          Sire 910081 Level 1                       yes      0.171     0.014
+          Sire 910088 Level 1                       yes      0.068     0.021
+
+ Sire QTL effects [1] [Panne]            
+
+          Sire 910001 Level 1                       yes     -0.049     0.021
+          Sire 910045 Level 1                       yes     -0.034     0.028
+          Sire 910081 Level 1                       yes     -0.086     0.014
+          Sire 910088 Level 1                       yes     -0.103     0.021
+
+ Dam QTL effects [1] [Bardiere]          
+
+          Dam 910014 Level 1                        yes     -0.305     0.049
+          Dam 910002 Level 1                        yes     -0.489     0.049
+          Dam 910010 Level 1                        yes     -0.212     0.054
+          Dam 910074 Level 1                        yes     -0.328     0.061
+
+ Dam QTL effects [1] [Imf]               
+
+          Dam 910014 Level 1                        yes      0.048     0.049
+          Dam 910002 Level 1                        yes      0.201     0.049
+          Dam 910010 Level 1                        yes     -0.033     0.054
+          Dam 910074 Level 1                        yes      0.069     0.061
+
+ Dam QTL effects [1] [Panne]             
+
+          Dam 910014 Level 1                        yes     -0.064     0.049
+          Dam 910002 Level 1                        yes     -0.041     0.049
+          Dam 910010 Level 1                        yes     -0.095     0.054
+          Dam 910074 Level 1                        yes     -0.102     0.061
+
+ Sire polygenic effects [Bardiere]       
+
+          Sire 910001                               yes     -0.677     0.067
+          Sire 910045                               yes     -0.444     0.058
+          Sire 910081                               yes     -0.247     0.065
+          Sire 910088                               no 
+
+ Sire polygenic effects [Imf]            
+
+          Sire 910001                               yes      0.001     0.067
+          Sire 910045                               yes     -0.048     0.058
+          Sire 910081                               yes     -0.017     0.065
+          Sire 910088                               no 
+
+ Sire polygenic effects [Panne]          
+
+          Sire 910001                               yes     -0.126     0.067
+          Sire 910045                               yes     -0.128     0.058
+          Sire 910081                               yes     -0.037     0.065
+          Sire 910088                               no 
+
+ Dam polygenic effects [Bardiere]        
+
+          Dam 910014 [Sire 910001]                  yes      0.048     0.069
+          Dam 910002 [Sire 910081]                  yes     -0.164     0.075
+          Dam 910010 [Sire 910081]                  yes     -0.171     0.071
+          Dam 910074 [Sire 910088]                  yes     -0.293     0.080
+
+ Dam polygenic effects [Imf]             
+
+          Dam 910014 [Sire 910001]                  yes      0.020     0.069
+          Dam 910002 [Sire 910081]                  yes      0.061     0.075
+          Dam 910010 [Sire 910081]                  yes     -0.012     0.071
+          Dam 910074 [Sire 910088]                  yes      0.013     0.080
+
+ Dam polygenic effects [Panne]           
+
+          Dam 910014 [Sire 910001]                  yes      0.023     0.069
+          Dam 910002 [Sire 910081]                  yes     -0.020     0.075
+          Dam 910010 [Sire 910081]                  yes     -0.005     0.071
+          Dam 910074 [Sire 910088]                  yes     -0.058     0.080
+
+  NOTE: known allelic origin means QTL effect =  maternal - paternal allele effects
+
+ Residual Correlations 
+             1            2
+         2 -0.007
+         3  0.655    -0.051
+                         ***                          
+  The mean of absolute value of substitution effect WQ (in std unit) =
+  -------------------------- 
+ | qtl     1 | wq :     0.668 |Bardiere
+ | qtl     1 | wq :     0.852 |Imf
+ | qtl     1 | wq :     0.860 |Panne
+  -------------------------- 
+
+ Allelic origin for 910001          
+Chromosome 7    : known
+ Allelic origin for 910045          
+Chromosome 7    : known
+ Allelic origin for 910081          
+Chromosome 7    : known
+ Allelic origin for 910088          
+Chromosome 7    : known
+
+ NOTE: known allelic origin means QTL effect =  maternal - paternal allele effects
+
+  === Confidence Intervals === 
+
+  Trait [Bardiere]
+ Name       -      Average        - Positions Left/Right 
+Drop off         90.0%    ,    0.650 M -     0.730 M
+Drop off         95.0%    ,    0.650 M -     0.740 M
+Drop off         98.0%    ,    0.640 M -     0.740 M
+Hengde Li         90.0%    ,    0.655 M -     0.729 M
+Hengde Li         95.0%    ,    0.646 M -     0.739 M
+Hengde Li         98.0%    ,    0.641 M -     0.763 M
+
+  Trait [Imf]
+ Name       -      Average        - Positions Left/Right 
+
+  Trait [Panne]
+ Name       -      Average        - Positions Left/Right 
+     ***    
+     DATE      = 2013/06/20-16:54:37
+     ***    

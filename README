@@ -1,0 +1,78 @@
+=======================================================
+QTLMap : a software dedicated to the detection 
+of QTL from experimental designs in outbred population.
+
+Website : http://www.inra.fr/qtlmap
+=======================================================
+
+=======================================================
+Prerequisites
+=======================================================
+- GCC, the GNU Compiler Collection (http://gcc.gnu.org/)
+- LAPACK (http://www.netlib.org/lapack/)
+- CMake (http://www.cmake.org/)
+
+=======================================================
+Optionals Prerequisites
+=======================================================
+CUDA support
+- CUDA toolkit (http://developer.nvidia.com/cuda-downloads)
+
+Developer documentation :
+- ROBODoc : http://rfsber.home.xs4all.nl/Robo/
+
+========================================================
+Installation
+========================================================
+create a new directory inside the QTLMap directory (${QTLMAP_DIR}) 
+called "build" with the following command :
+mkdir build;cd build
+
+---------------------------
+** Build QTLMap with OpenMP support
+cmake -DCMAKE_Fortran_COMPILER=gfortran -DCMAKE_BUILD_TYPE=Release ..
+
+** Build QTLMap with CUDA support (Double precision)
+cmake -DCMAKE_Fortran_COMPILER=gfortran -DCMAKE_BUILD_TYPE=Release -DCUDA_IMPL=true -DTYPE_ARCH_CUDA="compute_20" ../..
+
+** Build QTLMap with CUDA support (Simple precision)
+cmake -DCMAKE_Fortran_COMPILER=gfortran -DCMAKE_BUILD_TYPE=Release -DCUDA_IMPL=true -DTYPE_ARCH_CUDA="compute_20" -DCUDA_SP=true ../.. 
+
+* CMake additionals options 
+---------------------------
+** LAPACK path
+   -DLAPACK_LIBRARY_PATH=/path/lapack
+
+** CUDA architecture
+   -DTYPE_ARCH_CUDA="compute_X", where X=10,11,12,13,20 (see documentation of the compiler nvcc)
+
+** ROBODoc generation
+   -DROBODOC=true
+
+** NAG ( Numerical Algorithms Group : http://www.nag.co.uk/)
+  - This option replaces the call of some function using lapack/NLopt/orderpack libraries.   
+     * E04JYF : quasi-Newton algorithm
+     * G01EEF,G01EAF,G01FAF,G01AAF,G01ECF,G01EBF,G03ACF,G05EHF : calculation of probability 
+     * M01CAF,M01DAF,M01DBF,M01DAF,M01DBF,M01DCF,M01ZAF,M01DFF : vector operations
+     * F03ABF,F01ADF : matrix operations
+     
+  -DUSE_NAG_LIBRARY=true
+  
+     
+execute the command "make" to compile the application 
+and "make install" to execute qtlmap from ${QTLMAP_DIR}/bin.
+
+
+Note : On CUDA support, only analysis : 3,4,25,26,27,28 are available
+
+========================================================
+Execution
+========================================================
+
+The examples can be find in the sample directory
+
+========================================================
+Information 
+========================================================
+Subscribe and post any message/question to the qtlmap-users list. 
+qtlmap-users@listes.inra.fr

@@ -1,0 +1,20 @@
+MARKERS
+0.01 10 5 2 * 1           ! densité (M),nb_alleles/mark,taille_carte (M),unite,code_manq,type_mark
+
+GENEALOGY
+F2                       ! type croisement: que F2 possible
+5 3 10                   ! nb_peres, nb_meres/pere, nb_desc/mere ==> 5peres, 15femelles, 150desc
+
+QTL
+1                        ! nb QTL
+position 0.6                      ! position QTL1...
+chromosome 7
+frequency 1.0                      ! frq alleles QTL dans P1 et P2 - biallelique pour QTL1...
+
+SIMULTRAITS
+2
+traitsimul1 r 0.50
+traitsimul2 i 0.50 4 0.3 0.3 0.3 0.1
+correlation [ [0.0] ]
+qtleffect   0.5 0.5
+

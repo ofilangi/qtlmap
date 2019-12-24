@@ -1,0 +1,5 @@
+Test l'execution des programme. On ne prend pas en compte la validité des résultats. L'objectif est de detecter des bugs d'acces mémoire.
+
+Tests :
+-output_files : test la génération de tous les fichiers de sortie
+

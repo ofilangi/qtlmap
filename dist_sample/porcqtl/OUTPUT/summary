@@ -1,0 +1,11 @@
+
+ *************************************************************************************
+ Summary 0 QTL versus 1 QTL
+Variable  N        Max Lik        Pos (M)    Sire                 910001                                910045                                910081                                910088
+               0/1QTL    Chr              Pos1 eff1 SD  Student-Test1(*) eff1 SD  Student-Test1(*) eff1 SD  Student-Test1(*) eff1 SD  Student-Test1(*)
+Bardiere 236     49.17  7          0.69           -0.16      0.49  sign    -0.15      0.56  sign    -0.21      0.57  sign    -0.23      0.60  sign
+     Imf 236     46.44  7          0.71            0.21      0.33  sign     0.16      0.43  sign     0.16      0.35  sign     0.07      0.34  sign
+   Panne 236     54.49  7          0.67           -0.05      0.14  sign    -0.03      0.11  sign    -0.09      0.19  sign    -0.11      0.18  sign
+
+
+    (*) Approximate test of the significance of the QTL effect within sire.

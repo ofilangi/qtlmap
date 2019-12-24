@@ -1,0 +1,24 @@
+# ANALYSIS PARAMETERS
+# ------------------
+# analysis step :  1 centimorgans
+opt_step=0.1
+# minimal number of progeny by dams 
+opt_ndmin=20
+# chromosome to analyse
+opt_chromosome=7
+#for several chromosomes
+#opt_chromosome=7,8,Y
+#unknown genotype
+opt_unknown_char=0
+
+
+#--------------- OUTPUT -----------------------------
+# OUTPUTSIM AND OUTPUT DIRECTORY EXIST.... 
+out_output=./OUTPUTSIM/result  # le fichier resultat
+out_summary=./OUTPUTSIM/summary # Le summary
+
+# **** THRESHOLD **** : execute qtlmap with --nsim=xxx or --simulation
+in_paramsimul=param_sim_optim # reference trait from the model
+out_maxlrt=./OUTPUT/simul # max LRT and postion for each simulation
+
+

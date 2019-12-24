@@ -1,0 +1,48 @@
+Copyright or © or Copr. INRA (2010)
+contributors :
+
+  Pascale Le Roy     <Pascale.LeRoy@rennes.inra.fr>
+  Jean-Michel Elsen  <Jean-Michel.Elsen@toulouse.inra.fr>
+  Helene Gilbert     <Helene.Gilbert@jouy.inra.fr>
+  Carole Moreno      <Carole.Moreno@toulouse.inra.fr>
+  Andres Legarra     <Andres.Legarra@toulouse.inra.fr>
+  Olivier Filangi    <Olivier.Filangi@rennes.inra.fr>
+
+
+QTLMap is a computer program dedicated to the detection
+of QTL from experimental designs in outbred population.
+The statistical techniques used are linkage analysis (LA) and
+linkage disequilibrium linkage analysis (LDLA) using interval mapping.
+Different versions of the LA are proposed from a  quasi Maximum Likelihood
+ approach to a fully linear (regression) model.
+The LDLA is a regression approach (Legarra and Fernando, 2009).
+The population may be sets of half-sib families or mixture of
+full- and half- sib families.
+The computations of Phase and Transmission probabilities are optimized to be rapid and as exact as possible.
+QTLMap is able to deal with large numbers of markers (SNP) and traits (eQTL).
+!
+This software is governed by the CeCILL  license under French law and
+abiding by the rules of distribution of free software.  You can  use,
+modify and/ or redistribute the software under the terms of the CeCILL
+license as circulated by CEA, CNRS and INRIA at the following URL
+"http://www.cecill.info".
+
+As a counterpart to the access to the source code and  rights to copy,
+modify and redistribute granted by the license, users are provided only
+with a limited warranty  and the software's author,  the holder of the
+economic rights,  and the successive licensors  have only  limited
+liability.
+
+In this respect, the user's attention is drawn to the risks associated
+with loading,  using,  modifying and/or developing or reproducing the
+software by the user in light of its specific status of free software,
+that may mean  that it is complicated to manipulate,  and  that  also
+therefore means  that it is reserved for developers  and  experienced
+professionals having in-depth computer knowledge. Users are therefore
+encouraged to load and test the software's suitability as regards their
+requirements in conditions enabling the security of their systems and/or
+data to be ensured and,  more generally, to use and operate it in the
+same conditions as regards security.
+
+The fact that you are presently reading this means that you have had
+knowledge of the CeCILL license and that you accept its terms.

@@ -1,0 +1,107 @@
+     ***    
+        DATE      = 2013/09/10-17:11:25
+        Release-build      = 0.9.6-C-10.09.2013-15.49.16
+        ARGUMENTS   = p_analyse --data-transcriptomic --calcul=25 --qtl=2
+        --CALCUL  =           25  (LINEAR LD HOMOSCEDASTIC)
+ OMP_NUM_THREADS  =            6
+
+
+     *****************  PARAMETERS ANALYSE FILE SUMMARY *****************
+
+out_output                              =./OUTPUT/result                                                                 
+out_lrtsires                            =./OUTPUT/sires                                                                  
+out_lrtdams                             =./OUTPUT/dams                                                                   
+out_pded                                =./OUTPUT/pded                                                                   
+out_pdedjoin                            =./OUTPUT/pdedjoin                                                               
+out_pateff                              =./OUTPUT/pateff                                                                 
+out_mateff                              =./OUTPUT/mateff                                                                 
+out_freqall                             =./OUTPUT/freqall                                                                
+out_summary                             =./OUTPUT/summary                                                                
+opt_chromosome                          =1                                                                               
+opt_ndmin                               =20                                                                              
+opt_step                                =0.01                                                                            
+opt_unknown_char                        =*                                                                               
+opt_mindamphaseproba                    =0.10                                                                            
+opt_minsirephaseproba                   =0.65                                                                            
+opt_eps_cholesky                        =0.01                                                                            
+opt_eps_confusion                       =0.70                                                                            
+opt_eps_hwe                             =0.01                                                                            
+opt_eps_linear_heteroscedastic          =0.5                                                                             
+in_map                                  =carte                                                                           
+in_genealogy                            =genea                                                                           
+in_traits                               =pheno_t                                                                         
+in_genotype                             =typage                                                                          
+in_model                                =model_1                                                                         
+opt_max_iteration_linear_heteroscedastic=30                                                                              
+opt_eps_recomb                          =0.05                                                                            
+out_phases                              =./OUTPUT/phase                                                                  
+out_phases_offspring                    =./OUTPUT/phases_offspring                                                       
+out_haplotypes                          =./OUTPUT/haplotype                                                              
+opt_nb_haplo_prior                      =200                                                                             
+opt_prob_haplo_min                      =0.2                                                                             
+opt_long_min_ibs                        =4                                                                               
+opt_longhap                             =4                                                                               
+opt_optim_maxeval                       =1000000                                                                         
+opt_optim_maxtime                       =1000000                                                                         
+opt_optim_tolx                          =0.00005                                                                         
+opt_optim_tolf                          =0.00005                                                                         
+opt_optim_tolg                          =0.00005                                                                         
+opt_optim_h_precision                   =0.00005                                                                         
+
+
+     *****************  GENEALOGY DESCRIPTION *****************
+
+ The pedigree file includes       0 parents born from      0 grand sires and       0 grand dams
+ and     400 progeny born from      4 sires and      20 dams
+
+
+     ***************** MARKER DESCRIPTION *****************
+
+  400 animals are present in the genotype file 
+ animal305 306 307 308 309 310 311 312 313 314 315 316 317 318 319 320 of genotype file are not in the pedigree file
+ where all animals are genotyped for at least one marker.
+markers were selected among   10 markers
+There are  400 genotyped animals
+
+ ** Check the equilibrium of marker transmission within each family **
+
+
+     ***************** PARENTAL PHASES *****************
+                       FILE :./OUTPUT/phase
+     ***************************************************
+ Profile    :           1
+ Hypothesis :0
+ Given parameters are respectively :
+ Gene position on the array, [ *std dev *301,302,303,304][General Mean][ *Sire polygenic effects*Sire 301,Sire 302,Sire 303,Sire 304][ *Dam polygenic effects*Dam 322 [Sire 301],Dam 324 [Sire 301],Dam 321 [Sire 302],Dam 323 [Sire 302],Dam 325 [Sire 302],Dam 322 [Sire 303],Dam 324 [Sire 303],Dam 321 [Sire 304],Dam 323 [Sire 304],Dam 325 [Sire 304]]
+
+ note : 0.0 means not estimable 
+
+                   T1  0.301  0.301  0.301  0.301  0.760 -0.276  0.209 -0.002  0.000 -0.009  0.000  0.061 -0.068  0.000 -0.024  0.000  0.029 -0.188  0.000
+                   T2  0.773  0.773  0.773  0.773  2.677 -0.646  0.515  0.066  0.000  0.024  0.000  0.172 -0.234  0.000 -0.044  0.000  0.074 -0.507  0.000
+                   T3  1.841  1.841  1.841  1.841  7.350 -1.288  1.130  0.333  0.000  0.259  0.000  0.546 -0.599  0.000  0.028  0.000  0.210 -1.252  0.000
+                   T4  3.681  3.681  3.681  3.681 15.829 -2.092  1.950  0.935  0.000  0.994  0.000  1.382 -1.423  0.000  0.086  0.000  0.384 -2.615  0.000
+                   T5  5.804  5.804  5.804  5.804 25.124 -2.783  2.923  1.587  0.000  2.033  0.000  2.584 -2.215  0.000  0.413  0.000  1.023 -3.971  0.000
+ Profile    :           1
+ Hypothesis :1
+ Given parameters are respectively :
+ Gene position on the array, Chromosome 1, QTL Position 1,H0/H1,[ *std dev *301,302,303,304][General Mean][ *Haplotypes effects[1]*0000(race=UNKNOWN, freq=0.37),0001(race=UNKNOWN, freq=0.62),RARE(race=UNKNOWN, freq=0.00)][ *Sire polygenic effects*Sire 301,Sire 302,Sire 303,Sire 304][ *Dam polygenic effects*Dam 322 [Sire 301],Dam 324 [Sire 301],Dam 321 [Sire 302],Dam 323 [Sire 302],Dam 325 [Sire 302],Dam 322 [Sire 303],Dam 324 [Sire 303],Dam 321 [Sire 304],Dam 323 [Sire 304],Dam 325 [Sire 304]]
+
+ note : 0.0 means not estimable 
+
+                   T1 1       0.096  6.777   0.296   0.296   0.296   0.296   0.721   0.131   0.000   0.000  -0.236   0.183  -0.041   0.000  -0.009   0.000   0.045  -0.074   0.000  -0.024   0.000   0.022  -0.214   0.000
+                   T2 1       0.096  6.548   0.760   0.760   0.760   0.760   2.578   0.331   0.000   0.000  -0.547   0.449  -0.033   0.000   0.024   0.000   0.132  -0.251   0.000  -0.044   0.000   0.056  -0.573   0.000
+                   T3 1       0.096  6.095   1.813   1.813   1.813   1.813   7.122   0.761   0.000   0.000  -1.060   0.978   0.106   0.000   0.259   0.000   0.452  -0.636   0.000   0.028   0.000   0.170  -1.404   0.000
+                   T4 1       0.096  6.626   3.621   3.621   3.621   3.621  15.354   1.585   0.000   0.000  -1.616   1.634   0.462   0.000   0.994   0.000   1.187  -1.502   0.000   0.086   0.000   0.300  -2.931   0.000
+                   T5 1       0.096  6.185   5.715   5.715   5.715   5.715  24.399   2.416   0.000   0.000  -2.058   2.441   0.866   0.000   2.033   0.000   2.287  -2.334   0.000   0.413   0.000   0.894  -4.454   0.000
+ Profile    :           1
+ Hypothesis :2
+ Given parameters are respectively :
+ Gene position on the array, Chromosome 1, QTL Position 1,Chromosome 2, QTL Position 2,H0/H2,H1/H2,[ *std dev *301,302,303,304][General Mean][ *Haplotypes effects[1]*0000(race=UNKNOWN, freq=0.87),RARE(race=UNKNOWN, freq=0.13)][ *Haplotypes effects[2]*0000(race=UNKNOWN, freq=0.37),0001(race=UNKNOWN, freq=0.62),RARE(race=UNKNOWN, freq=0.00)][ *Sire polygenic effects*Sire 301,Sire 302,Sire 303,Sire 304][ *Dam polygenic effects*Dam 322 [Sire 301],Dam 324 [Sire 301],Dam 321 [Sire 302],Dam 323 [Sire 302],Dam 325 [Sire 302],Dam 322 [Sire 303],Dam 324 [Sire 303],Dam 321 [Sire 304],Dam 323 [Sire 304],Dam 325 [Sire 304]]
+
+ note : 0.0 means not estimable 
+
+                   T1 1       0.046 1       0.096  8.371   1.594   0.294   0.294   0.294   0.294   0.615   0.132   0.000   0.180   0.000   0.000  -0.262   0.133  -0.096   0.000  -0.009   0.000   0.039  -0.077   0.000  -0.024   0.000   0.026  -0.198   0.000
+                   T2 1       0.056 1       0.096  9.198   2.651   0.755   0.755   0.755   0.755   2.230   0.429   0.000   0.494   0.000   0.000  -0.628   0.287  -0.211   0.000   0.024   0.000   0.111  -0.259   0.000  -0.044   0.000   0.068  -0.521   0.000
+                   T3 1       0.046 1       0.096 10.337   4.241   1.794   1.794   1.794   1.794   6.062   1.316   0.000   1.251   0.000   0.000  -1.316   0.477  -0.444   0.000   0.259   0.000   0.392  -0.661   0.000   0.028   0.000   0.207  -1.247   0.000
+                   T4 1       0.046 1       0.096 12.400   5.774   3.569   3.569   3.569   3.569  12.889   3.060   0.000   2.726   0.000   0.000  -2.211   0.468  -0.816   0.000   0.994   0.000   1.046  -1.558   0.000   0.086   0.000   0.386  -2.567   0.000
+                   T5 1       0.046 1       0.096 12.647   6.462   5.623   5.623   5.623   5.623  20.287   5.105   0.000   4.318   0.000   0.000  -3.051   0.496  -1.266   0.000   2.033   0.000   2.052  -2.428   0.000   0.413   0.000   1.039  -3.846   0.000

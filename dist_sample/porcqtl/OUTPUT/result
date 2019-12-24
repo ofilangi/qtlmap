@@ -1,0 +1,675 @@
+    ***  
+        DATE      = 2019/12/24-14:02:58
+        Release-build      = 1.0.0-24.12.2019-13.43.32
+        ARGUMENTS   = p_analyse
+        --CALCUL  =            1  (UNITRAIT ANALYSIS)
+ OMP_NUM_THREADS  =            1
+
+
+     *****************  PARAMETERS ANALYSE FILE SUMMARY *****************
+
+out_output                              =./OUTPUT/result                                                                 
+out_lrtsires                            =./OUTPUT/sires                                                                  
+out_lrtdams                             =./OUTPUT/dams                                                                   
+out_pded                                =./OUTPUT/pded                                                                   
+out_pdedjoin                            =./OUTPUT/pdedjoin                                                               
+out_pateff                              =./OUTPUT/pateff                                                                 
+out_mateff                              =./OUTPUT/mateff                                                                 
+out_summary                             =./OUTPUT/summary                                                                
+opt_chromosome                          =7                                                                               
+opt_ndmin                               =20                                                                              
+opt_step                                = 0.01                                                                           
+opt_unknown_char                        =0                                                                               
+opt_mindamphaseproba                    =0.10                                                                            
+opt_minsirephaseproba                   =0.90                                                                            
+opt_eps_cholesky                        =0.01                                                                            
+opt_eps_confusion                       =0.70                                                                            
+opt_eps_hwe                             =0.01                                                                            
+opt_eps_linear_heteroscedastic          =0.5                                                                             
+in_map                                  =map                                                                             
+in_genealogy                            =genealogy                                                                       
+in_traits                               =phenotypes                                                                      
+in_genotype                             =genotype                                                                        
+in_model                                =model                                                                           
+in_paramsimul                           =param_sim_real                                                                  
+out_maxlrt                              =./OUTPUT/all_simul                                                              
+opt_max_iteration_linear_heteroscedastic=30                                                                              
+opt_eps_recomb                          =0.05                                                                            
+out_phases                              =./OUTPUT/phases                                                                 
+opt_nb_haplo_prior                      =200                                                                             
+opt_prob_haplo_min                      =0.01000                                                                         
+opt_long_min_ibs                        =4                                                                               
+opt_longhap                             =4                                                                               
+opt_optim_maxeval                       =1000000                                                                         
+opt_optim_maxtime                       =1000000                                                                         
+opt_optim_tolx                          =0.00005                                                                         
+opt_optim_tolf                          =0.00005                                                                         
+opt_optim_tolg                          =0.00005                                                                         
+opt_optim_h_precision                   =0.00005                                                                         
+
+
+     *****************  GENEALOGY DESCRIPTION *****************
+
+ The pedigree file includes      20 parents born from      5 grand sires and       5 grand dams
+ and     236 progeny born from      4 sires and      16 dams
+
+
+     ***************** MARKER DESCRIPTION *****************
+
+  236 animals are present in the genotype file 
+ animal890738 900848 of genotype file are not in the pedigree file
+ where all animals are genotyped for at least one marker.
+markers were selected among   10 markers
+There are  236 genotyped animals
+
+ ** Check the equilibrium of marker transmission within each family **
+
+
+
+    ***************** TRAITS DESCRIPTION *****************
+
+
+     NUMBER OF PHENOTYPED ANIMALS   :   236
+     NUMBER OF PHENOTYPED AND GENOTYPED ANIMALS :   236
+     NUMBER OF TRAITS               :     3
+     NUMBER OF FIXED EFFECTS        :     0
+     NUMBER OF COVARIABLES          :     0
+
+ TRAIT :Bardie
+     NUMBER OF PHENOTYPED PROGENY               :   236
+     MEANS                                      :    7.169+-   0.650
+     MINIMUM                                    :    6.048
+     MAXIMUM                                    :   9.668
+     NUMBER OF MISSING PHENOTYPES               :     0
+     NUMBER OF CENSORED PHENOTYPES              :    0
+ WITHOUT MODEL for fixed effects and covariables
+
+ TRAIT :   Imf
+     NUMBER OF PHENOTYPED PROGENY               :   236
+     MEANS                                      :    1.984+-   0.396
+     MINIMUM                                    :    0.930
+     MAXIMUM                                    :   3.270
+     NUMBER OF MISSING PHENOTYPES               :     0
+     NUMBER OF CENSORED PHENOTYPES              :    0
+ WITHOUT MODEL for fixed effects and covariables
+
+ TRAIT : Panne
+     NUMBER OF PHENOTYPED PROGENY               :   236
+     MEANS                                      :    0.963+-   0.192
+     MINIMUM                                    :    0.626
+     MAXIMUM                                    :   1.830
+     NUMBER OF MISSING PHENOTYPES               :     0
+     NUMBER OF CENSORED PHENOTYPES              :    0
+ WITHOUT MODEL for fixed effects and covariables
+
+     ***************** PARENTAL PHASES *****************
+                       FILE :./OUTPUT/phases
+     ***************************************************
+
+
+         ************************************
+         *                                  *
+         *  Analysis of trait      Bardiere *
+         *                                  *
+         *                                  *
+         ************************************
+
+
+ LRT profile on the linkage group :
+  position, test statistic  , 
+     4 sire QTL effects , 
+    16 dam QTL effects
+ ---------------------------------------------------------------
+ Estimation of parameters under H0
+ ---------------------------------------------------------------
+
+ Within sire standard deviation
+ sire 910001  s.d. :     0.551
+ sire 910045  s.d. :     0.578
+ sire 910081  s.d. :     0.659
+ sire 910088  s.d. :     0.663
+
+
+
+  parameter            estimable ?    value     precision
+
+ Mean Sire                               
+
+          Sire 910001                               yes      6.902     0.000
+          Sire 910045                               yes      7.091     0.000
+          Sire 910081                               yes      7.220     0.000
+          Sire 910088                               yes      7.441     0.000
+
+ Mean dam                                
+
+          Dam 910014 [Sire 910001]                  yes      0.040     0.000
+          Dam 910002 [Sire 910081]                  yes      0.000     0.000
+          Dam 910010 [Sire 910081]                  yes      0.000     0.000
+          Dam 910074 [Sire 910088]                  yes      0.000     0.000
+
+                       *****                    
+   ** chromosome  7 ** 
+
+            I----------------I----------------I----------------I----------------I-
+          
+    49.2 -                             oo
+    47.9 I                             o o
+    46.6 I                            o  o
+    45.4 I                           o    ooo
+    44.1 I                                  oo
+    42.8 I                          oo       o
+    41.5 I                          o         o
+    40.3 I                          o         o
+    39.0 -                         o           o
+    37.7 I                         o           o
+    36.4 I                        o
+    35.2 I                        o             o
+    33.9 I                       o              o
+    32.6 I                      oo
+    31.3 I                    oo                o
+    30.1 I                   oo                  o
+    28.8 I                  oo
+    27.5 -                  o                    o
+    26.3 I                  o                     o
+    25.0 I                 o
+    23.7 I                oo                      o
+    22.4 I                o                       o
+    21.2 I               o                         o
+    19.9 I               o                         o    ooo
+    18.6 -               o                             oo  o
+    17.3 I              o                           o oo    ooooo
+    16.1 I              o                           o o          oo
+    14.8 I             o                            oo             oo
+    13.5 I             o                                            oo
+    12.3 I            o                                              oo
+    11.0 I           oo                                               ooo
+     9.7 I        oooo                                                  ooo
+     8.4 I  oooooo                                                        ooo
+     7.2 I                                                                   ooo
+     5.9 -                                                                     ooo
+          
+            I----------------I----------------I----------------I----------------I-
+           0.01             0.43             0.86             1.28             1.70
+
+
+ Maximum likelihood ratio test :
+
+Test H0 / H1 :  49.17052
+
+ The maximum is reached at position(s)    0.6900(Chr :7   ) 
+ flanking marker (qtl:    1) ,SLA                 ,S0102               
+ ---------------------------------------------------------------
+ Estimation of parameters under H1
+ ---------------------------------------------------------------
+
+ Within sire standard deviation
+ sire 910001  s.d. :     0.492
+ sire 910045  s.d. :     0.562
+ sire 910081  s.d. :     0.573
+ sire 910088  s.d. :     0.602
+
+
+
+  parameter            estimable ?    value     precision
+
+ Sire Qtl effect                         
+
+          Sire 910001                               yes     -0.157     0.000
+          Sire 910045                               yes     -0.148     0.000
+          Sire 910081                               yes     -0.206     0.000
+          Sire 910088                               yes     -0.228     0.000
+
+ Dam Qtl effect                          
+
+          Dam 910014                                yes     -0.307     0.000
+          Dam 910002                                yes     -0.480     0.000
+          Dam 910010                                yes     -0.194     0.000
+          Dam 910074                                yes     -0.264     0.000
+
+ Mean Sire                               
+
+          Sire 910001                               yes      6.873     0.000
+          Sire 910045                               yes      7.083     0.000
+          Sire 910081                               yes      7.179     0.000
+          Sire 910088                               yes      7.404     0.000
+
+ Mean dam                                
+
+          Dam 910014 [Sire 910001]                  yes     -0.000     0.000
+          Dam 910002 [Sire 910081]                  yes      0.006     0.000
+          Dam 910010 [Sire 910081]                  yes     -0.006     0.000
+          Dam 910074 [Sire 910088]                  yes     -0.000     0.000
+
+                         ***                          
+  The mean of absolute value of substitution effect WQ (in std unit) =
+  -------------------------- 
+ | qtl     1 | wq :     0.660 |
+  -------------------------- 
+
+        ****        
+ Marker informativity at the maximum likelihood estimation
+
+  0 < informativity < 1 
+
+  -------------------------------------
+ QTL   1 position= 0.6900
+
+Chromosome number tested =   1 [Chromosome=7]
+Position number tested =  69/169
+
+
+Left marker = SLA position =  0.6200
+Right marker = S0102 position =  0.7400
+                    *** 
+                    Sire  910001
+  - Informativity =   0.905
+  - Haplotype     = [3121/4432]
+                    *** 
+                    Sire  910045
+  - Informativity =   0.894
+  - Haplotype     = [3651/5432]
+                    *** 
+                    Sire  910081
+  - Informativity =   0.937
+  - Haplotype     = [21522/61243]
+                    *** 
+                    Sire  910088
+  - Informativity =   0.918
+  - Haplotype     = [2821/4444]
+
+
+
+         ************************************
+         *                                  *
+         *  Analysis of trait           Imf *
+         *                                  *
+         *                                  *
+         ************************************
+
+
+ LRT profile on the linkage group :
+  position, test statistic  , 
+     4 sire QTL effects , 
+    16 dam QTL effects
+ ---------------------------------------------------------------
+ Estimation of parameters under H0
+ ---------------------------------------------------------------
+
+ Within sire standard deviation
+ sire 910001  s.d. :     0.391
+ sire 910045  s.d. :     0.452
+ sire 910081  s.d. :     0.397
+ sire 910088  s.d. :     0.348
+
+
+
+  parameter            estimable ?    value     precision
+
+ Mean Sire                               
+
+          Sire 910001                               yes      1.988     0.000
+          Sire 910045                               yes      1.947     0.000
+          Sire 910081                               yes      1.988     0.000
+          Sire 910088                               yes      2.000     0.000
+
+ Mean dam                                
+
+          Dam 910014 [Sire 910001]                  yes     -0.006     0.000
+          Dam 910002 [Sire 910081]                  yes      0.000     0.000
+          Dam 910010 [Sire 910081]                  yes      0.000     0.000
+          Dam 910074 [Sire 910088]                  yes      0.000     0.000
+
+                       *****                    
+   ** chromosome  7 ** 
+
+            I----------------I----------------I----------------I----------------I-
+          
+    46.4 -                              oo
+    45.1 I                             o  ooo
+    43.8 I                             o    oo
+    42.5 I                            o      oo
+    41.2 I                            o       o
+    39.9 I                           o         o
+    38.6 I                          oo          o
+    37.3 I                         o            o
+    36.0 -                        oo            o
+    34.7 I                        o              o
+    33.4 I                        o              o
+    32.1 I                                        o
+    30.8 I                       o                o
+    29.5 I                       o                 o
+    28.2 I                      o                  o
+    26.9 I                      o                   o
+    25.6 I                     o                    o
+    24.3 -                    o                      o
+    23.0 I                    o                       o
+    21.7 I                    o                       oo
+    20.4 I                   o                         oo
+    19.1 I                   o                          oo
+    17.8 I                  o                            o
+    16.5 I                  o                             oo  oo
+    15.2 -                  o                               oo ooooo
+    13.9 I                 o                                       oo
+    12.6 I                oo                                         oo
+    11.2 I                o                                           ooo
+     9.9 I               o                                              oo
+     8.6 I               o                                               oo
+     7.3 I              oo                                                oo
+     6.0 I  oo         oo                                                   oo
+     4.7 I   oo        o                                                     ooooo
+     3.4 I     oo    oo
+     2.1 -       ooooo
+          
+            I----------------I----------------I----------------I----------------I-
+           0.01             0.43             0.86             1.28             1.70
+
+
+ Maximum likelihood ratio test :
+
+Test H0 / H1 :  46.43992
+
+ The maximum is reached at position(s)    0.7100(Chr :7   ) 
+ flanking marker (qtl:    1) ,SLA                 ,S0102               
+ ---------------------------------------------------------------
+ Estimation of parameters under H1
+ ---------------------------------------------------------------
+
+ Within sire standard deviation
+ sire 910001  s.d. :     0.333
+ sire 910045  s.d. :     0.425
+ sire 910081  s.d. :     0.353
+ sire 910088  s.d. :     0.338
+
+
+
+  parameter            estimable ?    value     precision
+
+ Sire Qtl effect                         
+
+          Sire 910001                               yes      0.215     0.000
+          Sire 910045                               yes      0.161     0.000
+          Sire 910081                               yes      0.165     0.000
+          Sire 910088                               yes      0.070     0.000
+
+ Dam Qtl effect                          
+
+          Dam 910014                                yes      0.048     0.000
+          Dam 910002                                yes      0.196     0.000
+          Dam 910010                                yes     -0.029     0.000
+          Dam 910074                                yes      0.074     0.000
+
+ Mean Sire                               
+
+          Sire 910001                               yes      2.012     0.000
+          Sire 910045                               yes      1.957     0.000
+          Sire 910081                               yes      2.003     0.000
+          Sire 910088                               yes      2.009     0.000
+
+ Mean dam                                
+
+          Dam 910014 [Sire 910001]                  yes     -0.000     0.000
+          Dam 910002 [Sire 910081]                  yes      0.035     0.000
+          Dam 910010 [Sire 910081]                  yes     -0.035     0.000
+          Dam 910074 [Sire 910088]                  yes     -0.000     0.000
+
+                         ***                          
+  The mean of absolute value of substitution effect WQ (in std unit) =
+  -------------------------- 
+ | qtl     1 | wq :     0.849 |
+  -------------------------- 
+
+        ****        
+ Marker informativity at the maximum likelihood estimation
+
+  0 < informativity < 1 
+
+  -------------------------------------
+ QTL   1 position= 0.7100
+
+Chromosome number tested =   1 [Chromosome=7]
+Position number tested =  71/169
+
+
+Left marker = SLA position =  0.6200
+Right marker = S0102 position =  0.7400
+                    *** 
+                    Sire  910001
+  - Informativity =   0.919
+  - Haplotype     = [3121/4432]
+                    *** 
+                    Sire  910045
+  - Informativity =   0.936
+  - Haplotype     = [3651/5432]
+                    *** 
+                    Sire  910081
+  - Informativity =   0.954
+  - Haplotype     = [21522/61243]
+                    *** 
+                    Sire  910088
+  - Informativity =   0.950
+  - Haplotype     = [2821/4444]
+
+
+
+         ************************************
+         *                                  *
+         *  Analysis of trait         Panne *
+         *                                  *
+         *                                  *
+         ************************************
+
+
+ LRT profile on the linkage group :
+  position, test statistic  , 
+     4 sire QTL effects , 
+    16 dam QTL effects
+ ---------------------------------------------------------------
+ Estimation of parameters under H0
+ ---------------------------------------------------------------
+
+ Within sire standard deviation
+ sire 910001  s.d. :     0.158
+ sire 910045  s.d. :     0.112
+ sire 910081  s.d. :     0.213
+ sire 910088  s.d. :     0.213
+
+
+
+  parameter            estimable ?    value     precision
+
+ Mean Sire                               
+
+          Sire 910001                               yes      0.918     0.000
+          Sire 910045                               yes      0.899     0.000
+          Sire 910081                               yes      0.994     0.000
+          Sire 910088                               yes      1.014     0.000
+
+ Mean dam                                
+
+          Dam 910014 [Sire 910001]                  yes     -0.002     0.000
+          Dam 910002 [Sire 910081]                  yes      0.000     0.000
+          Dam 910010 [Sire 910081]                  yes      0.000     0.000
+          Dam 910074 [Sire 910088]                  yes      0.000     0.000
+
+                       *****                    
+   ** chromosome  7 ** 
+
+            I----------------I----------------I----------------I----------------I-
+          
+    54.5 -                            oo
+    53.1 I                  oooo      o o
+    51.7 I                  o   o oooo   o
+    50.3 I                 o    oo       o
+    49.0 I                 o             o
+    47.6 I                o
+    46.2 I                o               oo
+    44.8 I               o                 oo
+    43.4 -               o                  oo
+    42.0 I               o                   o
+    40.6 I              o                     o
+    39.3 I              o                     oo
+    37.9 I                                     o
+    36.5 I             o                        o
+    35.1 I             o                        o
+    33.7 I             o                        o
+    32.3 I            o                          o
+    31.0 -     ooooo  o                          o
+    29.6 I    oo   ooo                            o
+    28.2 I   oo      o                            o
+    26.8 I  o                                     o
+    25.4 I  o                                      o
+    24.0 I                                         o     ooo
+    22.6 I                                          o  oo  ooo
+    21.3 -                                          o o       oo
+    19.9 I                                          ooo         oo
+    18.5 I                                                       o
+    17.1 I                                                        o
+    15.7 I                                                         o
+    14.3 I                                                          o
+    13.0 I                                                          oo
+    11.6 I                                                           oo
+    10.2 I                                                            oo
+     8.8 I                                                             ooooooooo
+     7.4 -                                                                     ooo
+          
+            I----------------I----------------I----------------I----------------I-
+           0.01             0.43             0.86             1.28             1.70
+
+
+ Maximum likelihood ratio test :
+
+Test H0 / H1 :  54.48949
+
+ The maximum is reached at position(s)    0.6700(Chr :7   ) 
+ flanking marker (qtl:    1) ,SLA                 ,S0102               
+ ---------------------------------------------------------------
+ Estimation of parameters under H1
+ ---------------------------------------------------------------
+
+ Within sire standard deviation
+ sire 910001  s.d. :     0.145
+ sire 910045  s.d. :     0.108
+ sire 910081  s.d. :     0.188
+ sire 910088  s.d. :     0.177
+
+
+
+  parameter            estimable ?    value     precision
+
+ Sire Qtl effect                         
+
+          Sire 910001                               yes     -0.052     0.000
+          Sire 910045                               yes     -0.031     0.000
+          Sire 910081                               yes     -0.087     0.000
+          Sire 910088                               yes     -0.108     0.000
+
+ Dam Qtl effect                          
+
+          Dam 910014                                yes     -0.066     0.000
+          Dam 910002                                yes     -0.037     0.000
+          Dam 910010                                yes     -0.090     0.000
+          Dam 910074                                yes     -0.094     0.000
+
+ Mean Sire                               
+
+          Sire 910001                               yes      0.909     0.000
+          Sire 910045                               yes      0.898     0.000
+          Sire 910081                               yes      0.981     0.000
+          Sire 910088                               yes      0.999     0.000
+
+ Mean dam                                
+
+          Dam 910014 [Sire 910001]                  yes     -0.000     0.000
+          Dam 910002 [Sire 910081]                  yes     -0.005     0.000
+          Dam 910010 [Sire 910081]                  yes      0.005     0.000
+          Dam 910074 [Sire 910088]                  yes     -0.000     0.000
+
+                         ***                          
+  The mean of absolute value of substitution effect WQ (in std unit) =
+  -------------------------- 
+ | qtl     1 | wq :     0.858 |
+  -------------------------- 
+
+        ****        
+ Marker informativity at the maximum likelihood estimation
+
+  0 < informativity < 1 
+
+  -------------------------------------
+ QTL   1 position= 0.6700
+
+Chromosome number tested =   1 [Chromosome=7]
+Position number tested =  67/169
+
+
+Left marker = SLA position =  0.6200
+Right marker = S0102 position =  0.7400
+                    *** 
+                    Sire  910001
+  - Informativity =   0.903
+  - Haplotype     = [3121/4432]
+                    *** 
+                    Sire  910045
+  - Informativity =   0.894
+  - Haplotype     = [3651/5432]
+                    *** 
+                    Sire  910081
+  - Informativity =   0.940
+  - Haplotype     = [21522/61243]
+                    *** 
+                    Sire  910088
+  - Informativity =   0.918
+  - Haplotype     = [2821/4444]
+
+
+ Allelic origin for 910001          
+Chromosome 7    : known
+ Allelic origin for 910045          
+Chromosome 7    : known
+ Allelic origin for 910081          
+Chromosome 7    : known
+ Allelic origin for 910088          
+Chromosome 7    : known
+
+ NOTE: known allelic origin means QTL effect =  maternal - paternal allele effects
+
+  === Confidence Intervals === 
+--------------------------- QTL = 1------------------------------
+  Trait [Bardiere]
+          Name   Position     Method    Average   Pos Left  Pos Right   Left flank marker     Pos  Right flank marker        Pos
+                       ==  H 1/0 == 
+         QTL_1    0.690      Drop off     90.0%     0.630     0.790                SLA       0.620           SW352     1.010
+         QTL_1    0.690      Drop off     95.0%     0.620     0.820                SLA       0.620           SW352     1.010
+         QTL_1    0.690      Drop off     98.0%     0.610     0.840             SW1369       0.520           SW352     1.010
+                       ***                                      
+         QTL_1    0.690     Hengde Li     90.0%     0.630     0.798                SLA       0.620           SW352     1.010
+         QTL_1    0.690     Hengde Li     95.0%     0.621     0.818                SLA       0.620           SW352     1.010
+         QTL_1    0.690     Hengde Li     98.0%     0.606     0.836             SW1369       0.520           SW352     1.010
+                       ***                                      
+--------------------------- QTL = 1------------------------------
+  Trait [Imf]
+          Name   Position     Method    Average   Pos Left  Pos Right   Left flank marker     Pos  Right flank marker        Pos
+                       ==  H 1/0 == 
+         QTL_1    0.710      Drop off     90.0%     0.640     0.830                SLA       0.620           SW352     1.010
+         QTL_1    0.710      Drop off     95.0%     0.630     0.850                SLA       0.620           SW352     1.010
+         QTL_1    0.710      Drop off     98.0%     0.620     0.870                SLA       0.620           SW352     1.010
+                       ***                                      
+         QTL_1    0.710     Hengde Li     90.0%     0.647     0.830                SLA       0.620           SW352     1.010
+         QTL_1    0.710     Hengde Li     95.0%     0.635     0.849                SLA       0.620           SW352     1.010
+         QTL_1    0.710     Hengde Li     98.0%     0.611     0.873             SW1369       0.520           SW352     1.010
+                       ***                                      
+--------------------------- QTL = 1------------------------------
+  Trait [Panne]
+          Name   Position     Method    Average   Pos Left  Pos Right   Left flank marker     Pos  Right flank marker        Pos
+                       ==  H 1/0 == 
+         QTL_1    0.670      Drop off     90.0%     0.520     0.720             SW1369       0.520           S0102     0.740
+         QTL_1    0.670      Drop off     95.0%     0.370     0.730             SW1354       0.230           S0102     0.740
+         QTL_1    0.670      Drop off     98.0%     0.350     0.740             SW1354       0.230           S0102     0.740
+                       ***                                      
+         QTL_1    0.670     Hengde Li     90.0%     0.377     0.718             SW1354       0.230           S0102     0.740
+         QTL_1    0.670     Hengde Li     95.0%     0.377     0.718             SW1354       0.230           S0102     0.740
+         QTL_1    0.670     Hengde Li     98.0%     0.359     0.732             SW1354       0.230           S0102     0.740
+                       ***                                      
+     ***    
+     DATE      = 2019/12/24-14:02:58
+     ***    

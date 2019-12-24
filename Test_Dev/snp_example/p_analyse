@@ -1,0 +1,71 @@
+# 
+# Voici un exemple de fichier de configuration pour qtlmap 
+# 
+#    FAIRE qtlmap --help-panalyse pour des informations sur l ensemble des cles
+
+#-----------USER FILES  -------------------------------------
+in_map=carte
+in_genealogy=genea
+in_genotype=typage
+in_traits=pheno
+in_model=model # the model describes the data if traits file 
+#-------------------------------------------------------------------------
+out_phases=./OUTPUT/phases
+# ANALYSIS PARAMETERS
+# ------------------
+# analysis step :  1 centimorgans
+opt_step=0.01
+# minimal number of progeny by dams 
+opt_ndmin=20
+#
+opt_minsirephaseproba=0.55
+# example of a overload : 
+opt_minsirephaseproba=0.65
+# chromosome to analyse
+opt_chromosome=1
+#for several chromosomes
+#opt_chromosome=7,8,Y
+#unknown genotype
+opt_unknown_char=*
+
+
+#--------------- OUTPUT -----------------------------
+# OUTPUTSIM AND OUTPUT DIRECTORY EXIST.... 
+out_output=./OUTPUT/result  # le fichier resultat
+out_summary=./OUTPUT/summary # Le summary
+out_phases=./OUTPUT/phase
+
+#  ANALYSIS OPTIONS FILES
+# uncomment to obtain the generation of the specific files
+# --------------------------------------------------------
+
+# LRT sires 
+out_lrtsires=./OUTPUT/sires # Courbes LRT des sires        
+
+# LRT dams 
+#out_lrtdams=./OUTPUT/dams   # Courbes LRT des dams
+
+#Generate file with grand parental segment transmission marginal probabilities
+#out_pded=./OUTPUT/pded
+
+#Generate file with grand parental segment transmission joint probabilities
+#out_pdedjoin=./OUTPUT/pdedjoin
+
+#files with Sire QTL effect estimations
+out_pateff=./OUTPUT/pateff
+
+#files with Dam QTL effect estimations
+#out_mateff=./OUTPUT/mateff
+
+#Discriminant analysis case: coefficient
+#out_coeffda=./OUTPUT/coefDA
+
+#2 QTL analysis case : LRT grid qtl
+#out_grid2qtl=./OUTPUT/grid2qtl
+
+
+# **** THRESHOLD **** : execute qtlmap with --nsim=xxx or --simulation
+#in_paramsimul=param_sim_real # reference trait from the model
+out_simulation=./OUTPUT/simul # max LRT and postion for each simulation
+
+opt_prob_haplo_min=0.2

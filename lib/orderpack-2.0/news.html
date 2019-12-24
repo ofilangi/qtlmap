@@ -1,0 +1,85 @@
+<HTML>
+<HEAD>
+<TITLE>ORDERPACK 1.0 -- Unconditional, Unique, and Partial Ranking, Sorting, and
+Permutation Downloadable Fortran 90 source code</TITLE>
+</HEAD>
+<BODY bgcolor="#FBF0DF" text="#000000" link="#A50000" vlink="#3D0000" alink="#CB0000">
+<P ALIGN="center"><H2><A NAME=0.0>ORDERPACK</A> -- Recent news</H2></P>
+<p><hr></p>
+<p>Author: Michel Olagnon</p>
+<p><hr></p>
+<P><H2>Contents :</H2></P>
+<DL>
+   <DD><A HREF="#1.0">Index of cited routines</A>
+    <DL>
+	<DD><A HREF="#indmed">INDMED</A>
+	<DD><A HREF="#indnth">INDNTH</A>
+	<DD><A HREF="#fndnth">FNDNTH</A>
+	<DD><A HREF="#unista">UNISTA</A>
+	<DD><A HREF="#valnth1">VALNTH</A>
+	<DD><A HREF="#valnth2">VALNTH</A>
+	<DD><A HREF="#valmed1">VALMED</A>
+	<DD><A HREF="#valmed">VALMED</A>
+    </DL>
+   <DD><A HREF="#2.0">On-going at present</A>
+    <DL>
+	<DD><A HREF="#2.1">Performance improvements</A>
+	<DD><A HREF="#indmed">INDMED</A>
+	<DD><A HREF="#valmed">VALMED</A>
+	<DD><A HREF="#2.2">Development</A>
+	<DD><A HREF="#unista">UNISTA</A>
+	<DD><A HREF="#valmed1">VALMED</A>
+	<DD><A HREF="#valnth1">VALNTH (1)</A>
+    </DL>
+   <DD><A HREF="#3.0">Recent changes</A>
+    <DL>
+	<DD><A HREF="#3.1">INDNTH/VALNTH bug correction (2001/01/26)</A>
+    </DL>
+</DL>
+<P><HR></P>
+<UL>
+   <LI><A NAME=2.0>On-going at present</A><P>&nbsp;</P>
+     <UL>
+	<LI><A NAME=2.1>Performance improvements</A>:
+<P>I am working on the median and index of median searching routines <A NAME=valmed>VALMED</A> and <A NAME=indmed>INDMED</A>.</P>
+<P>As of <font color="#3366FF">2001/02/01</font>, I have been conveying the same improvement as below in INDMED, but at present, the performance gain is not as impressive, and it might be faster to use VALMED and look for the index of a value equal to the identified median than to use INDMED.
+My estimate is that it would save about 10% execution time.</P>
+<P>As of <font color="#3366FF">2001/01/27</font>, I have been able to reduce time in VALMED by about 40% through a much better way to sort subsets of 7 elements, as required by the first stage of the algorithm. 
+I am in the process of implementing the improvement in INDMED, but at present, the performance gain is not as impressive, and it might be faster to use VALMED and look for the index of a value equal to the identified median than to use INDMED.</P>
+	    </LI>
+	<LI><A NAME=2.2>Development</A>:
+<P>I am working on the next release of ORDERPACK, where we will have routines embedded in <A HREF="http://www.fortran.com/F">F</A>-compatible modules, with a generic name and a specific version for each of the data types Integer, Real, Double precision.</P>
+<P>As of <font color="#3366FF">2001/12/01</font>, only a few routines are still not ready (<A NAME=fndnth>FNDNTH</A>, <A NAME=valnth1>VALNTH</A>, <A NAME=valmed1>VALMED</A> and <A NAME=unista>UNISTA</A>), and I will wait a little more before I put them on the site, so as to make it the upgrade to version 2.0.
+Those who would want an early version should send me an e-mail.</P>
+	    </LI>
+	<LI><A NAME=2.3>Usage help</A>:
+<P>I intend to provide two example programs: the test program for the algorithm to sort subsets of 7 elements, and the <A HREF="http://www.fortran.com/F">F</A>-compatible timing program that I used for the preparation of the first generic modules of the next release of ORDERPACK.</P>
+<P>As of <font color="#3366FF">2001/01/27</font>, this is expected to come during the next weeks.</P>
+	    </LI>
+     </UL>
+     </LI>
+</UL>
+<P><HR></P>
+<UL>
+   <LI><A NAME=3.0>Recent changes</A><P>&nbsp;</P>
+     <UL>
+	<LI><A NAME=indnth>INDNTH</A>/<A NAME=valnth2>VALNTH</A> <A NAME=3.1>bug</A> correction:<br>
+<P>On <font color="#3366FF">2001/01/26</font>, I realized a line had been forgotten in the correction of the bug below, so it worked only half of the time. If you use INDNTH or VALNTH, please upgrade your version.<br>
+On <font color="#3366FF">2000/11/04</font>, I found a bug in these routines. Under some circumstances, when there are identical values in the set to be examined, the program would go into an infinite loop.
+A correction was made.</P>
+	    </LI>
+     </UL>
+     </LI>
+</UL>
+<P><HR></P>
+<P>Last updated: 2001/02/01</P>
+<P><A HREF=#0.0>Back to top</A></P>
+<P><HR></P>
+</BODY>
+<ADDRESS>
+<P>
+<A HREF="http://www.ifremer.fr/metocean/group/michel/michel_olagnon.htm">
+Michel Olagnon</A> IFREMER Brest / <A HREF="mailto:michel.olagnon@ifremer.fr">Michel.Olagnon@ifremer.fr</A>
+</P>
+</ADDRESS>
+</HTML>

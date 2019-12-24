@@ -1,0 +1,23 @@
+##### USER FILES
+in_map=carte
+in_genealogy=ped
+in_genotype=typ
+in_race=race
+in_traits=perf_fx
+in_model=model_fx
+
+##### ANALYSIS PARAMETERS
+opt_step = 0.001
+opt_ndmin=20
+opt_minsirephaseproba=0.90
+opt_mindamphaseproba=0.10
+opt_chromosome=24
+opt_unknown_char=.
+opt_eps_recomb=0.1
+opt_prob_haplo_min=0.01
+
+out_output=OUTPUT/result
+out_summary=OUTPUT/summary26
+out_lrtsires=OUTPUT/sires26
+out_phases=OUTPUT/phases26
+out_haplotypes=OUTPUT/haplotypes26

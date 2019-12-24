@@ -1,0 +1,72 @@
+NLopt 1.2 (18 November 2009)
+
+* Added Powell's BOBYQA algorithm for box-constrained optimization
+  without derivatives, an improvement on NEWUOA.
+
+* Added ISRES genetic algorithm, supporting nonlinearly constrained
+  global optimization.
+
+* New functions nlopt_{set/get}_stochastic_population to provide
+  optional greater control over the random "population" sizes in
+  stochastic algorithms (although it still has a sensible default).
+
+* Bug fix: remove extraneous text accidentally included in nlopt.f Fortran
+  include file.
+
+* Bug fix: configure script now correctly handles Matlab installation
+  when MEX_INSTALL_DIR is specified manually by the user.
+
+NLopt 1.1 (12 November 2009)
+
+* configure script detects whether --enable-shared is required
+  in order to compile Matlab and Octave plugins (as is the case
+  on x86_64), and disables compilation of those plugins if
+  --enable-shared is not used.
+
+* Added --without-octave and --without-matlab configure options to
+  disable Octave and Matlab plugins, respectively.
+
+* Modified COBYLA algorithm to have better support for bound
+  constraints.
+
+* Added new NLOPT_ROUNDOFF_LIMITED failure code to indicate
+  cases in which optimization breaks down due to roundoff errors,
+  in which case it is possible that useful results were obtained.
+
+* Experimental support for nonlinear equality constraints via
+  augmented-Lagrangian method.
+
+* Support for compiling under Windows (ideally with MinGW) as a 
+  DLL, although you have to manually add #define NLOPT_DLL
+  to nlopt.h *after* installing (after compiling NLopt).
+
+* Added several checks for roundoff-related breakdown to NEWUOA code.
+
+* When only a relative error tolerance is specified, no longer
+  fails to halt when exact convergence to zero is obtained.
+
+* Workaround for incompatible qsort_r functions in BSD and GNU libc
+  by always using my own version; thanks to Wendy Vandoolaeghe
+  and Philippe Preux for the bug report and explanation.
+
+* Workaround for gcc 3.4.x conflict with HUGE_VAL definition in Solaris
+  (gcc bug 19933).
+
+* Better identification of Matlab-plugin installation directory.
+
+* Fixed identification of Octave-plugin installation directory for
+  recent Octave versions.
+
+NLopt 1.0.1 (13 Nov. 2008)
+
+* Allow user to override Matlab-plugin installation directory with
+  MEX_INSTALL_DIR.
+
+* Bug fix in my DIRECT code that prevented convergence (DIRECT-L unaffected).
+
+* MLSL needs a nonzero default ftol_rel and/or xtol_rel to ensure that
+  its local searches terminate; use roughly machine precision as defaults.
+
+NLopt 1.0 (11 Nov. 2008)
+
+* Initial public release.

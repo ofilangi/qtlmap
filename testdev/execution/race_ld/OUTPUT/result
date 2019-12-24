@@ -1,0 +1,43 @@
+     ***    
+        DATE      = 2013/01/10-13:49:21
+        Release-build      = 0.9.-TYPES-09.01.2013-15.07.18
+        ARGUMENTS   = p_analyse --calcul=31
+        --CALCUL  =           31  (ANALYSE_UNITRAIT_LINEAR_RACE_HETERO)
+ OMP_NUM_THREADS  =            1
+
+
+     *****************  PARAMETERS ANALYSE FILE SUMMARY *****************
+
+out_output                              =OUTPUT/result                                                                   
+out_lrtsires                            =OUTPUT/sires26                                                                  
+out_summary                             =OUTPUT/summary26                                                                
+opt_chromosome                          =24                                                                              
+opt_ndmin                               =20                                                                              
+opt_step                                = 0.001                                                                          
+opt_unknown_char                        =.                                                                               
+opt_mindamphaseproba                    =0.10                                                                            
+opt_minsirephaseproba                   =0.90                                                                            
+opt_eps_cholesky                        =0.01                                                                            
+opt_eps_confusion                       =0.70                                                                            
+opt_eps_hwe                             =0.01                                                                            
+opt_eps_linear_heteroscedastic          =0.5                                                                             
+in_map                                  =carte                                                                           
+in_genealogy                            =ped                                                                             
+in_race                                 =race                                                                            
+in_traits                               =perf_fx                                                                         
+in_genotype                             =typ                                                                             
+in_model                                =model_fx                                                                        
+opt_max_iteration_linear_heteroscedastic=30                                                                              
+opt_eps_recomb                          =0.1                                                                             
+out_phases                              =OUTPUT/phases26                                                                 
+out_haplotypes                          =OUTPUT/haplotypes26                                                             
+opt_nb_haplo_prior                      =200                                                                             
+opt_prob_haplo_min                      =0.01                                                                            
+opt_long_min_ibs                        =4                                                                               
+opt_longhap                             =4                                                                               
+opt_optim_maxeval                       =1000000                                                                         
+opt_optim_maxtime                       =1000000                                                                         
+opt_optim_tolx                          =0.00005                                                                         
+opt_optim_tolf                          =0.00005                                                                         
+opt_optim_tolg                          =0.00005                                                                         
+opt_optim_h_precision                   =0.00005                                                                         

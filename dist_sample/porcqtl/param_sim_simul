@@ -1,0 +1,9 @@
+SIMULTRAITS
+ 5
+ traitsimul1 r 0.50
+ traitsimul2 r 0.40 
+ traitsimul3 r 0.50
+ traitsimul4 r 0.40
+ traitsimul5 r 0.40
+ correlation [  [0.0] [0.0 0.0]  [0.0 0.0 0.0]  [0.0 0.0 0.0 0.0] ]
+

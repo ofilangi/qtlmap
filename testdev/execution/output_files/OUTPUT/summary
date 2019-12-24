@@ -1,0 +1,18 @@
+
+ *************************************************************************************
+ Summary 0 QTL versus 1 QTL
+Variable  N        Max Lik        Pos (M)    Sire                    301                                   302                                   303                                   304
+               0/1QTL    Chr              Pos1 eff1 SD  Student-Test1(*) eff1 SD  Student-Test1(*) eff1 SD  Student-Test1(*) eff1 SD  Student-Test1(*)
+   carac 200     21.65  1          0.06           -0.02      0.23   ns      0.13      0.31  sign     0.01      0.26   ns      0.15      0.30  sign
+
+
+    (*) Approximate test of the significance of the QTL effect within sire.
+
+ *************************************************************************************
+ Summary 0 QTL versus 2 QTL,1 QTL versus 2 QTL
+Variable  N        Max Lik        Pos (M)    Sire                    301                                   302                                   303                                   304
+               0/2QTL 1/2QTL    Chr              Pos1   Chr              Pos2 eff1 eff2 SD  Student-Test1(*) Student-Test2(*) eff1 eff2 SD  Student-Test1(*) Student-Test2(*) eff1 eff2 SD  Student-Test1(*) Student-Test2(*) eff1 eff2 SD  Student-Test1(*) Student-Test2(*)
+   carac 200     23.32      1.67  1          0.06  1          0.09           -0.03     0.00      0.23   ns   ns      0.14     0.00      0.31  sign  ns      0.02     0.00      0.26   ns   ns      0.35    -0.20      0.30  sign sign
+
+
+    (*) Approximate test of the significance of the QTL effect within sire.

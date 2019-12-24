@@ -1,0 +1,19 @@
+Need help
+---------
+
+${QTLMAP_BIN}/qtlmap --help
+
+Analysis 
+--------
+${QTLMAP_BIN}/qtlmap --calcul=1 p_analysis
+
+Getting threshold
+----------------- 
+${QTLMAP_BIN}/qtlmap --calcul=1 p_analysis --nisim=1000
+
+
+
+NOTE: ${QTLMAP_BIN} is the install directory of qtlmap
+
+
+

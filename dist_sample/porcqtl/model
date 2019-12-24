@@ -1,0 +1,12 @@
+5                   # number of traits
+0 0                 # number of fixed effect , number of covariable     
+nofe nocov          # names of fixed effects and covariable 
+Bardiere r 0 0      # name of trait 1 : model : fixe, cov, QTL*ef fixe / r : real i: integer c : categorial
+Imf      r 0 0      # ...
+Panne    r 0 0
+x2       r 0 0
+x4       r 0 0
+
+TRAITS
+
+Bardiere Imf Panne

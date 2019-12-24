@@ -1,0 +1,26 @@
+
+ *************************************************************************************
+ Summary 0 QTL versus 1 QTL
+Variable  N        Max Lik        Pos (M)    Sire                    301                                   302                                   303                                   304
+               0/1QTL    Chr              Pos1 eff1 SD  Student-Test1(*) eff1 SD  Student-Test1(*) eff1 SD  Student-Test1(*) eff1 SD  Student-Test1(*)
+      T1 200     21.65  1          0.03           -0.02      0.23   ns      0.14      0.31  sign     0.01      0.26   ns     -0.05      0.30  sign
+      T2 200     24.82  1          0.03           -0.06      0.62   ns      0.40      0.78  sign     0.01      0.61   ns     -0.09      0.78   ns 
+      T3 200     27.91  1          0.02           -0.17      1.50   ns      1.02      1.84  sign     0.02      1.32   ns     -0.13      1.89   ns 
+      T4 200     32.05  1          0.03           -0.36      3.08   ns      2.02      3.61  sign     0.18      2.51   ns     -0.18      3.72   ns 
+      T5 200     33.03  1          0.03           -0.54      4.85   ns      3.12      5.61  sign     0.30      4.12   ns     -0.16      5.81   ns 
+
+
+    (*) Approximate test of the significance of the QTL effect within sire.
+
+ *************************************************************************************
+ Summary 0 QTL versus 2 QTL,1 QTL versus 2 QTL
+Variable  N        Max Lik        Pos (M)    Sire                    301                                   302                                   303                                   304
+               0/2QTL 1/2QTL    Chr              Pos1   Chr              Pos2 eff1 eff2 SD  Student-Test1(*) Student-Test2(*) eff1 eff2 SD  Student-Test1(*) Student-Test2(*) eff1 eff2 SD  Student-Test1(*) Student-Test2(*) eff1 eff2 SD  Student-Test1(*) Student-Test2(*)
+      T1 200     24.25      2.59  1      1          0.12      0.13           -0.03     0.00      0.23   ns   ns      0.12     0.21      0.31  sign sign     0.01     0.00      0.26   ns   ns     -0.04     0.00      0.30   ns   ns 
+      T2 200     27.98      3.16  1      1          0.12      0.13           -0.11     0.00      0.61   ns   ns      0.34     0.00      0.78  sign  ns      0.01     0.00      0.61   ns   ns     -0.07     0.00      0.77   ns   ns 
+      T3 200     31.44      3.53  1      1          0.12      0.13           -0.28     0.00      1.48   ns   ns      0.87     0.00      1.84  sign  ns      0.01     0.00      1.32   ns   ns     -0.07     0.00      1.85   ns   ns 
+      T4 200     35.06      3.01  1      1          0.12      0.13           -0.55     0.57      3.04   ns   ns      1.78    -0.00      3.61  sign  ns      0.15     1.41      2.51   ns  sign    -0.07     0.00      3.66   ns   ns 
+      T5 200     35.19      2.16  1      1          0.10      0.13           -0.79     0.00      4.80   ns   ns      2.71     0.24      5.61  sign  ns      0.25     0.00      4.12   ns   ns     -0.04     0.00      5.75   ns   ns 
+
+
+    (*) Approximate test of the significance of the QTL effect within sire.

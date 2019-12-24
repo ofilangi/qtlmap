@@ -1,0 +1,12 @@
+5                 nbre de caracteres
+0 0                  nombre d'effet fixe et de cov     
+bidonfix bidoncov                    noms des effets fixes et des cov
+Bardiere r 0 0        CAR1:mod�le d'analyse ef fixe, cov, QTL*ef fixe QTL*cov / r : real i: integer c : categorial
+Imf      r 0 0    CAR2:mod�le d'analyse ef fixe, cov, QTL*ef fixe QTL*cov
+Panne    r 0 0
+x2       r 0 0
+x4       r 0 0
+
+TRAITS
+
+Bardiere

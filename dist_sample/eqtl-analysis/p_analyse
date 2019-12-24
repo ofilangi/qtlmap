@@ -1,0 +1,22 @@
+
+in_map=map
+in_genealogy=genealogy
+in_genotype=genotype
+in_traits=genes-phenotype
+in_model=model
+
+# analysis step :  1 centimorgans
+opt_step=0.1
+# minimal number of progeny by dams 
+opt_ndmin=50
+
+opt_minsirephaseproba=0.25
+opt_chromosome=5
+opt_unknown_char=0
+
+out_output=./OUTPUT/result  # le fichier resultat
+out_summary=./OUTPUT/summary # Le summary
+
+
+
+

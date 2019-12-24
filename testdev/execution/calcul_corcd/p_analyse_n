@@ -1,0 +1,57 @@
+#qtlmap --help-panalyse : for more information
+##### USER FILES 
+in_map=carte
+in_genealogy=genea
+in_genotype=typage
+in_traits=perf
+in_model=model_n
+
+##### ANALYSIS PARAMETERS
+
+# analysis step :  in Morgan 
+#minimum : 0.000001
+opt_step = 0.05 #step 5 cMorgan
+# minimal number of progeny by dams 
+opt_ndmin=10
+#Minimal paternal phase probability
+opt_minsirephaseproba=0.80
+# example of a parameter overloaded : 
+opt_minsirephaseproba=0.90
+#Minimal maternal phase probability :  all genotype with a probabilty above this value are considered in the analysis
+opt_mindamphaseproba=0.10
+# chromosome to analyse
+opt_chromosome=7
+#for several chromosomes
+#opt_chromosome=7,8,Y
+#missing phenotype marker value
+opt_unknown_char=0
+###### OUTPUT 
+out_output=./OUTPUT/result
+out_summary=./OUTPUT/summary 
+out_phases=./OUTPUT/phases
+# uncomment to obtain the generation of the specific files
+# LRT sires 
+out_lrtsires=./OUTPUT/sires # Courbes LRT des sires        
+# LRT dams 
+out_lrtdams=./OUTPUT/dams   # Courbes LRT des dams
+#Generate file with grand parental segment transmission marginal probabilities
+out_pded=./OUTPUT/pded
+#Generate file with grand parental segment transmission joint probabilities
+out_pdedjoin=./OUTPUT/pdedjoin
+
+#files with Sire QTL effect estimations
+out_pateff=./OUTPUT/pateff
+#files with Dam QTL effect estimations
+out_mateff=./OUTPUT/mateff
+#Discriminant analysis case: coefficient
+#out_coeffda=./OUTPUT/coefDA
+
+#2 QTL analysis case : LRT grid qtl
+out_grid2qtl=./OUTPUT/grid2qtl
+# **** THRESHOLD **** : execute qtlmap with --nsim=xxx or --simulation
+#in_paramsimul=param_sim_real # reference trait from the model
+#in_paramsimul=param_sim_simul # keys in_traits and in_model ca be commented 
+#in_paramsimul=param_sim_optim
+out_maxlrt=./OUTPUTSIM/simul # max LRT and postion for each simulation
+
+

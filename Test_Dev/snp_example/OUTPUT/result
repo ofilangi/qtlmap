@@ -1,0 +1,42 @@
+    ***  
+        DATE      = 2019/12/24-11:45:55
+        Release-build      = 0.9.7-24.12.2019-10.24.32
+        ARGUMENTS   = p_analyse
+        --CALCUL  =            1  (UNITRAIT ANALYSIS)
+ OMP_NUM_THREADS  =            6
+
+
+     *****************  PARAMETERS ANALYSE FILE SUMMARY *****************
+
+out_output                              =./OUTPUT/result                                                                 
+out_lrtsires                            =./OUTPUT/sires                                                                  
+out_pateff                              =./OUTPUT/pateff                                                                 
+out_summary                             =./OUTPUT/summary                                                                
+opt_chromosome                          =1                                                                               
+opt_ndmin                               =20                                                                              
+opt_step                                =0.01                                                                            
+opt_unknown_char                        =*                                                                               
+opt_mindamphaseproba                    =0.10                                                                            
+opt_minsirephaseproba                   =0.65                                                                            
+opt_eps_cholesky                        =0.01                                                                            
+opt_eps_confusion                       =0.70                                                                            
+opt_eps_hwe                             =0.01                                                                            
+opt_eps_linear_heteroscedastic          =0.5                                                                             
+in_map                                  =carte                                                                           
+in_genealogy                            =genea                                                                           
+in_traits                               =pheno                                                                           
+in_genotype                             =typage                                                                          
+in_model                                =model                                                                           
+opt_max_iteration_linear_heteroscedastic=30                                                                              
+opt_eps_recomb                          =0.05                                                                            
+out_phases                              =./OUTPUT/phase                                                                  
+opt_nb_haplo_prior                      =200                                                                             
+opt_prob_haplo_min                      =0.2                                                                             
+opt_long_min_ibs                        =4                                                                               
+opt_longhap                             =4                                                                               
+opt_optim_maxeval                       =1000000                                                                         
+opt_optim_maxtime                       =1000000                                                                         
+opt_optim_tolx                          =0.00005                                                                         
+opt_optim_tolf                          =0.00005                                                                         
+opt_optim_tolg                          =0.00005                                                                         
+opt_optim_h_precision                   =0.00005                                                                         
